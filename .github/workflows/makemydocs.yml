@@ -33,7 +33,7 @@ jobs:
         #   # (optional) Specify a google analytics key 
         #   # google_analytics: UA-XXXXXXX
         #   # (optional) Specify a different theme [mkdocs|readthedocs|material]
-          theme: mkdocs
+          theme: readthedocs
         #   # (optional) Load a configuration file from a string
           config: "mkdocs.yml"
         #   # (optional) Version or alias.  Specify multiple aliases with space
