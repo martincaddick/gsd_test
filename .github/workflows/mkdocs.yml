@@ -27,7 +27,9 @@ jobs:
           # (optional) The URL of the repository the docs should point to
           repo_url: https://github.com/martincaddick/gsd_test 
         #   # (optional) The name of the site
-        #   # site_name: martincaddick/gsd_test 
+          site_name: martincaddick/gsd_test
+          plugins:
+            - simple
           # (optional) The URL of the site
           site_url: https://martincaddick.github.io
           # (optional) The edit URI
@@ -35,7 +37,7 @@ jobs:
         #   # (optional) Specify a google analytics key 
         #   # google_analytics: UA-XXXXXXX
         #   # (optional) Specify a different theme [mkdocs|readthedocs|material]
-        #   theme: material
+          theme: material
         #   # (optional) Load a configuration file from a string
         #   # config: "mkdocs.yml"
         #   # (optional) Version or alias.  Specify multiple aliases with space
