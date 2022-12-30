@@ -11,6 +11,7 @@ repo_url: https://github.com/martincaddick/gsd_test
 site_url: https://martincaddick.github.io
 # (optional) The edit URI
 remote_branch: gh-pages
+remote_name: gh-pages
 edit_uri: edit/main/
 site_description: Getting Security Done
 site_author: David Caddick
