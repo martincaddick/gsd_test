@@ -27,7 +27,7 @@ jobs:
           # (optional) The URL of the repository the docs should point to
           repo_url: https://github.com/martincaddick/gsd_test 
         #   # (optional) The name of the site
-          site_name: martincaddick/gsd_test
+          site_name: gsd_test
           plugins:
             - simple
           # (optional) The URL of the site
