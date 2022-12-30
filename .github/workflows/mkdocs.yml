@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
+  # - name: MkDocs Simple action
+  # uses: athackst/mkdocs-simple-plugin@v2.1.3
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build docs
-        uses: athackst/mkdocs-simple-plugin
+        uses: athackst/mkdocs-simple-plugin@v2.1.3
         with:
           # (optional) Specify branch 
           publish_branch: gh-pages 
