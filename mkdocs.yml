@@ -2,3 +2,9 @@ site_name: "Demo GSD Site"
 plugins:
 - simple:
 - search:
+theme:
+  name: material
+  palette:
+    primary: green
+    accent: blue
+    
