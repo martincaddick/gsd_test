@@ -1119,19 +1119,16 @@ cautious in deployment
 > Both of the Team Channels above are covered by your NDA with Microsoft
 > from either a Partner or Customer perspective.
 
+
 +-------------------------------------+--------------------------------+
 | **Microsoft Cloud Security Private  | **Microsoft 365 Defender       |
 | Community**                         | Customer Connection Program**  |
 +=====================================+================================+
-| ![](./images/image            | ![](./images/image14.pn  |
-| 13.png){width="7.322916666666667in" | g){width="6.333333333333333in" |
-| height="5.333333333333333in"}       | height="3.5104166666666665in"} |
+| ![](./images/image13.png)            | ![](./images/image14.png)       |
 |                                     |                                |
 |                                     |                                |
 |                                     |                                |
-|                                     | ![](./images/image15.pn  |
-|                                     | g){width="6.270833333333333in" |
-|                                     | height="4.854166666666667in"}  |
+|                                     | ![](./images/image15.png)       |
 |                                     |                                |
 |                                     |                                |
 +-------------------------------------+--------------------------------+
