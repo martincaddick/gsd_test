@@ -29,7 +29,7 @@ jobs:
         #   # (optional) The name of the site
         #   # site_name: martincaddick/gsd_test 
           # (optional) The URL of the site
-          site_url: https://martincaddick.github.io/gsd_test
+          site_url: https://martincaddick.github.io
           # (optional) The edit URI
           edit_uri: edit/main/
         #   # (optional) Specify a google analytics key 
