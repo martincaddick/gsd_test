@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: MakeDocs
 
 # Controls when the workflow will run
@@ -24,16 +22,11 @@ jobs:
         with:
         #   # (optional) Specify branch 
         #   publish_branch: main # gh-pages 
-          # (optional) The URL of the repository the docs should point to
-          repo_url: https://github.com/martincaddick/gsd_test 
-          # (optional) The URL of the site
-          site_url: https://martincaddick.github.io
-          # (optional) The edit URI
-          edit_uri: edit/main/
+
         #   # (optional) Specify a google analytics key 
         #   # google_analytics: UA-XXXXXXX
         #   # (optional) Specify a different theme [mkdocs|readthedocs|material]
-          theme: material
+          # theme: material
         #   # (optional) Load a configuration file from a string
           config: "mkdocs.yml"
         #   # (optional) Version or alias.  Specify multiple aliases with space
