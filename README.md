@@ -1,2 +1,2 @@
 # Demo site
-This demo site uses 
+This demo site host the [GSD](./GSD.md) doc
