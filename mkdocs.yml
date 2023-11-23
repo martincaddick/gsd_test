@@ -1,6 +1,21 @@
 # Most settings taken from https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
-site_name: "Get Security Done"
+# site_name: "Get Security Done"
+site_name: The blueprint
+site_url: https://oobecomau.github.io/theblueprint # Primary URL
 
+site_name_oobe: oobe a Fujitsu company
+site_url_oobe: https://www.oobe.com.au
+site_name_o: oobe.com.au
+
+site_url_pp: https://www.oobe.com.au/about/privacy
+site_name_pp: Privacy policy
+
+site_url_c: https://www.oobe.com.au/about/contact
+site_name_c: Contact Us
+
+site_url_ms: https://www.macrosine.com.au/
+site_url_p365: https://www.perimeta.com.au/
+site_url_cs: https://www.oobe.com.au/about/contact
 # # Left hand Navigation menu
 # nav:
 #     - About this Project: 'README.md'
@@ -84,7 +99,7 @@ plugins:
       show_line_count: true
       show_email_address: true
   - git-revision-date-localized:
-      # fallback_to_build_date: true
+      fallback_to_build_date: true
       enable_creation_date: true
       timezone: Australia/Sydney
   - glightbox:
