@@ -48,7 +48,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    # - toc.integrate
+    - toc.integrate
   palette:
     - scheme: default
       primary: green
