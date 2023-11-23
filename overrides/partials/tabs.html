@@ -1,0 +1,22 @@
+{% set class = "" %}
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+        {% for nav_item in nav %} 
+          {% include "partials/tabs-item.html" %} 
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  {% if "material/search" in config.plugins %} 
+  <div class="md-search-container">
+      {% include "partials/search.html" %} 
+  </div>
+  {% endif %}
+  <div class="md-powered-logo">
+    <a href="{{ config.site_url_oobe | url }}" title="{{ config.site_name_oobe | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name_oobe }}" data-md-component="logo">
+      <img src="{{ 'img/oobe-powered-by-White-RGB.svg' | url }}" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
