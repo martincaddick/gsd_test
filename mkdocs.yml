@@ -27,7 +27,7 @@ repo_url: https://github.com/martincaddick/gsd_test
 repo_name: "Get Security Done"
 theme:
   name: material
-  custom_dir: overrides
+  # custom_dir: overrides
   icon: 
     repo: fontawesome/brands/git-alt
     admonition:
