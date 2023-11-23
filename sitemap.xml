@@ -1,227 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://martincaddick.github.io/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/essential-eight-maturity/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/essential-eight-maturity/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/platform/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/platform/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/office-365/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/office-365/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/security/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/security/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/client-devices/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/client-devices/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/abbreviations-and-acronyms/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/abbreviations-and-acronyms/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/automation/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/automation/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/as-built-as-configured/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/as-built-as-configured/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/solution-overview/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/blueprint/solution-overview/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/patterns/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/patterns/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/patterns/bring-your-own-device/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/patterns/bring-your-own-device/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/patterns/azure-virtual-desktop/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/patterns/azure-virtual-desktop/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/standard-operating-procedures/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/standard-operating-procedures/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/security-risk-management-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/security-risk-management-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/continuous-monitoring-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/continuous-monitoring-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/incident-response-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/incident-response-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/hybrid-incident-response-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-incident-response-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/hybrid-security-risk-management-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-security-risk-management-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/hybrid-system-security-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-system-security-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/hybrid-standard-operating-procedures/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-standard-operating-procedures/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/system-security-plan/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/system-security-plan/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/security/cloud-assessment-and-authorisation-alignment/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/security/cloud-assessment-and-authorisation-alignment/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/platform/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/platform/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/wdac-policy-creation/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/wdac-policy-creation/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/office-365/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/office-365/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-enrolment/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-enrolment/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/admin-disable-inactive-users/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/admin-disable-inactive-users/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/conditional-access-policies/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/conditional-access-policies/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/hybrid-task-sequence/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/hybrid-task-sequence/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/hybrid-network-configuration/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/hybrid-network-configuration/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-software-updates/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-software-updates/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-compliance/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-compliance/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-applications/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-applications/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/wfw-rules-import/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/wfw-rules-import/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-configuration/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-configuration/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/october2023newsupdate/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/october2023newsupdate/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/urlerrors/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/enhanced-mfa-2023-01-16/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/enhanced-mfa-2023-01-16/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/windows-11-2023-04-23/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/windows-11-2023-04-23/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/intro-the-blueprint-2023-04-23/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/intro-the-blueprint-2023-04-23/</loc>
-         <lastmod>2023-11-23</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/news/wip-guidance-2023-11-13/</loc>
+         <loc>https://oobecomau.github.io/theblueprint/news/wip-guidance-2023-11-13/</loc>
          <lastmod>2023-11-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
