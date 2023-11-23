@@ -1,0 +1,3103 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://martincaddick.github.io/security/continuous-monitoring-plan/">
+      
+      
+        <link rel="prev" href="../security-risk-management-plan/">
+      
+      
+        <link rel="next" href="../incident-response-plan/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
+    
+    
+      
+        <title>Continuous monitoring plan - Get Security Done</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#continuous-monitoring-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Get Security Done" class="md-header__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Get Security Done
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Continuous monitoring plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Get Security Done
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Get Security Done" class="md-nav__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Get Security Done
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Get Security Done
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Security Done
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blueprint/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blueprint
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential eight maturity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/client-devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abbreviations and acronyms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/solution-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solution overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../patterns/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/bring-your-own-device/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bring your own device
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/azure-virtual-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure virtual desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Continuous monitoring plan
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Continuous monitoring plan
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-a-continuous-monitoring-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developing a Continuous Monitoring Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing a Continuous Monitoring Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#continuous-monitoring-plan-structure-and-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Monitoring Plan structure and guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roles and responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measurements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measurements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-sources-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information sources &amp; collection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information sources & collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-gathering-tools-and-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data gathering tools and sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-data-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference data sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-monitoring-information-elicitation-activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous monitoring information elicitation activities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeframes-and-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeframes and frequencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timeframes and frequencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-ism-timeframes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required ISM timeframes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-aggregation-storage-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information aggregation, storage and management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Information aggregation, storage and management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-information-and-event-management-system-siem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Information and Event Management System (SIEM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-management-dashboards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security management dashboards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsive-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioritisation-of-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prioritisation of response
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-and-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review and update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachment-a-measurementsmetrics-development-and-analysis-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attachment A: Measurements/metrics development and analysis examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attachment A: Measurements/metrics development and analysis examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guidance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-and-patch-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability and patch management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-incident-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event &amp; incident management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#malware-detection-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Malware detection measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      License management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-management-measurement-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information management measurement example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachment-b-data-collection-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attachment B: Data collection example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attachment B: Data collection example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-table-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data collection table example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attachment-c-risk-analysis-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attachment C: Risk analysis example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attachment C: Risk analysis example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidance_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-assessment-table-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk assessment table example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../incident-response-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident response plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-incident-response-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid incident response plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid system security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud assessment and authorisation alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wdac-policy-creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wdac policy creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-enrolment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune enrolment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin disable inactive users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/conditional-access-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional access policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-task-sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid task sequence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-network-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid network configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-software-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune software updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-compliance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wfw-rules-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wfw rules import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../news/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    News
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/october2023newsupdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    October 2023 update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/urlerrors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urlerrors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enhanced MFA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/windows-11-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing the blueprint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/wip-guidance-2023-11-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Information Protection guidance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<hr />
+<h1 id="continuous-monitoring-plan">Continuous monitoring plan</h1>
+<p id="date-and-time">25 minutes to read - 30 March 2023</p>
+
+<p>This Continuous Monitoring Plan (CMP) has been prepared to support assessment of the ongoing security posture of the Protected Utility blueprint desktop environment. Throughout, this document provides continuous monitoring guidance including:</p>
+<ul>
+<li>Developing an agency-specific continuous monitoring plan</li>
+<li>Developing measurements to assess security controls</li>
+<li>Collecting data relating to areas of security that the agency is responsible for managing</li>
+<li>Aggregating collected monitoring data for analysis</li>
+<li>Analysing monitoring information to identify and assess the severity of security weaknesses, and</li>
+<li>Responding to identified security weaknesses.</li>
+</ul>
+<p>Throughout this document several security monitoring tools are identified. While continuous monitoring and security monitoring are not identical, some overlap exists between the two in their purpose. Security monitoring tools gather and record information that enables identification of potential vulnerabilities that arise in a system. This information is useful in assessing the system's overall health and security posture.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The <a href="https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-security-documentation">Information Security Manual (ISM) requires</a> agencies to create a CMP as one of the system-specific documents prior to a system's operation. This is to assist agencies in identifying, prioritising and responding to security vulnerabilities.</p>
+<p>To meet this requirement, this CMP provides agencies leveraging the blueprint desktop environment (the desktop environment) with an outline of implemented technologies that produce continuous monitoring data. This plan also provides guidance for monitoring the security posture of the system and verifying implemented security controls remain fit-for-purpose for the system's operating and threat environment.</p>
+<p>The three most common types of continuous monitoring activities are: vulnerability assessments; vulnerability scans; and penetration tests. These are not always possible or appropriate for systems that consume cloud services, such as the blueprint. Therefore, agencies should utilise this plan to consider what mechanisms are available to them to provide appropriate ongoing monitoring.</p>
+<h2 id="scope">Scope</h2>
+<p>The scope of this CMP is specific to monitoring security controls involved with the agency's use of Microsoft 365 services as part of the desktop environment. As the blueprint is implemented in collaboration with Microsoft as the Cloud Service Provider (CSP), a shared responsibility model exists to divide responsibilities relating to the security of the desktop environment.</p>
+<p>While continuous monitoring and security monitoring are not identical, overlap exists between the two in that many security monitoring tools gather and record monitoring information that is useful in assessing the overall security posture of a system. Agencies may wish to utilise a Security Information and Event Management System (SIEM) to aggregate monitoring information for the purpose of identifying weaknesses in the desktop environment's security posture.</p>
+<p>Continuous monitoring responsibilities that a consumer of the Microsoft 365 solution is not required to manage are out of this document's scope, these include:</p>
+<ul>
+<li>Vulnerability scanning of the Microsoft 365 platform and software</li>
+<li>Penetration testing of the Microsoft 365 platform and software, and</li>
+<li>Vulnerability assessment activities pertaining to the Microsoft 365 platform and software.</li>
+</ul>
+<p>This document covers continuous monitoring responsibilities owned by the agency or jointly owned between the agency and Microsoft.</p>
+<p>The CMP is a living document. It is anticipated that, over time, amendments and updates may be applied to the plan in the event of changes to the blueprint, the desktop environment or the agency.</p>
+<h2 id="developing-a-continuous-monitoring-plan">Developing a Continuous Monitoring Plan</h2>
+<p>Agencies are free to develop the structure of their CMP as appropriate for their organisation. The <a href="https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-security-documentation">ISM specifies</a> only that agencies must:</p>
+<ul>
+<li>conduct vulnerability scans for systems at least monthly</li>
+<li>conduct vulnerability assessments or penetration tests for systems at least annually</li>
+<li>analyse identified security vulnerabilities to determine their potential impact and appropriate mitigations based on effectiveness, cost and existing security controls</li>
+<li>use a risk-based approach to prioritise the implementation of identified mitigations.</li>
+</ul>
+<p>Whilst agencies will be able to undertake these activities in relation to on-premise equipment, there is limited ability to conduct vulnerability assessments, vulnerability scans and penetration tests against CSP infrastructure.</p>
+<p>Outside of ISM requirements, this document provides further suggestions and mechanisms which are available to agencies to provide ongoing monitoring across their implementation of the blueprint.</p>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf">National Institute of Standards and Technology (NIST)</a> outlines a standard process for conducting continuous monitoring information which includes the following initiatives, which agencies should utilise when developing their continuous monitoring strategy:</p>
+<ul>
+<li><strong>Define</strong> a continuous monitoring strategy based on risk tolerance that maintains clear visibility into assets and awareness of vulnerabilities, up-to-date threat information and business impacts</li>
+<li><strong>Establish</strong> metrics and measures, status monitoring frequencies, control assessment frequencies, and where needed a technical architecture</li>
+<li><strong>Implement</strong> a continuous monitoring program to collect the security related data required for the defined metrics and measures. Automate collection, analysis and reporting of data where possible</li>
+<li><strong>Analyze</strong> the data gathered and Report findings, determining the appropriate response. It may become necessary to collect additional information to clarify or supplement existing monitoring data</li>
+<li><strong>Respond</strong> to findings with technical, management, and operational mitigating activities or acceptance, transference/sharing, or avoidance/rejection</li>
+<li><strong>Review and Update</strong> the monitoring program, revising the continuous monitoring strategy and maturing measurement capabilities to increase visibility into assets and awareness of vulnerabilities; further enhance data driven control of the security of an organization's information infrastructure; and increase organizational flexibility.</li>
+</ul>
+<h3 id="continuous-monitoring-plan-structure-and-guidance">Continuous Monitoring Plan structure and guidance</h3>
+<p>The following section provides suggested inclusions and guidance for developing a CMP. The suggested sections are detailed in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Roles and Responsibilities</td>
+<td>Matrix of assigned roles related to continuous monitoring</td>
+</tr>
+<tr>
+<td>Measurements</td>
+<td>List of agency specific measurements and expected metric targets sorted by each continuous monitoring domain</td>
+</tr>
+<tr>
+<td>Information Sources and Collection</td>
+<td>List of information sources required to calculate measurements and procedures for collection (refer to <a href="#attachment-b-data-collection-example">Attachment B: Data Collection Example</a>)</td>
+</tr>
+<tr>
+<td>Timeframes and Frequencies</td>
+<td>Define agency specific requirements for timeframes and frequencies</td>
+</tr>
+<tr>
+<td>Information Storage and Management</td>
+<td>Agency specific policy decisions surrounding aggregation and storage of information</td>
+</tr>
+<tr>
+<td>Analysis</td>
+<td>Agency specific analysis procedures</td>
+</tr>
+<tr>
+<td>Response</td>
+<td>Agency policy details around risk assessment, risk tolerance and expected response actions and procedures (refer to <a href="#attachment-c-risk-analysis-example">Attachment C: Risk Analysis Example</a>)</td>
+</tr>
+<tr>
+<td>Continuous Monitoring Assessment</td>
+<td>List of measurement assessment tables (refer to <a href="#attachment-a-measurementsmetrics-development-and-analysis-examples">Attachment A: Measurements/Metrics Development and Analysis Examples</a>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="roles-and-responsibilities">Roles and responsibilities</h3>
+<p>The CMP should document relevant roles and responsibilities associated with performing continuous monitoring and maintaining the capabilities within the agency.</p>
+<p>Roles associated with continuous monitoring that may require documentation include:</p>
+<ul>
+<li>Chief Information Security Officer</li>
+<li>System Owner</li>
+<li>Authorising Officer</li>
+<li>Security Operations Centres</li>
+<li>Vulnerability Management Teams</li>
+<li>Desktop Support Teams, and</li>
+<li>Cloud Operations Teams.</li>
+</ul>
+<p>Responsibilities associated with continuous monitoring may include collecting, analysing and reporting continuous monitoring data. These responsibilities should be assigned to the relevant defined roles.</p>
+<h3 id="measurements">Measurements</h3>
+<p>The CMP should outline measures that the agency will use to evaluate whether security controls are working as intended and whether it is managing risk associated with the desktop environment appropriately.</p>
+<p>Measures should align with specific security objectives and aid in providing decision makers with an understanding of how security is performing within the system. The ISM recommends the agency's CISO implement metrics and measures for the organisation.</p>
+<p>The agency may wish to refer to guidance outlined in NIST 800-55 Performance Measurement Guide for Information Security. This guidance recommends measures are developed for security controls at the organisational, program and system levels to assess the following aspects of a security control:</p>
+<ul>
+<li>Implementation – progress in implementing information security programs, specific security controls and associated policies and procedures</li>
+<li>Effectiveness/efficiency – validating that security controls are implemented correctly, operating as intended and meeting their desired outcome</li>
+<li>Impact – the impact of a control on the agency's mission</li>
+</ul>
+<p>For holistic assessment of security, measures should be mapped to controls within the agency's security control framework.</p>
+<p>Examples of security control measurements have been included in <a href="#attachment-a-measurementsmetrics-development-and-analysis-examples">Attachment A: Measurements/Metrics Development and Analysis Examples</a>.</p>
+<h3 id="information-sources-collection">Information sources &amp; collection</h3>
+<p>The CMP should list any sources of information necessary to assess the defined measures. The agency should detail how this information will be collected, the purpose it is collected for and relevant details such as corporate business owners.</p>
+<p>The agency may consider utilising the example table provided in <a href="#attachment-b-data-collection-example">Attachment B: Data Collection Example</a> to document their data collection requirements and methods.</p>
+<h4 id="data-gathering-tools-and-sources">Data gathering tools and sources</h4>
+<p>Corporate desktop environments generate vast quantities of digital information from sources such as network devices, databases, servers and endpoints. Agencies will need to consider which information sources they require to maintain an awareness of the current state of their environment.</p>
+<p>Cloud based systems generate a wide range of information about their operation and use. This section provides examples of various information sources available that agencies may collect and monitor to provide visibility over the posture of their security program.</p>
+<p>The below table lists each continuous monitoring security domain alongside applicable Microsoft and agency tools and sources of information. The agency may consider monitoring information from these sources to measure each domain's security controls.</p>
+<p><strong>Note:</strong> In July 2022 Microsoft announced deprecation of certain capabilities within Windows Information Protection (WIP). Please see the news article <a href="../../news/wip-guidance-2023-11-13/">here</a></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>M365 Tools</th>
+<th>Agency Tools and Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vulnerability &amp; Patch Management</td>
+<td>Windows Server Update Service <br> Microsoft Endpoint Configuration Manager<br> Microsoft Intune <br> Microsoft Defender for Endpoint</td>
+<td>Vulnerability scanner <br> Vulnerability database <br> Patch Management database <br> Software registry</td>
+</tr>
+<tr>
+<td>Event &amp; Incident Management</td>
+<td>MECM Endpoint Detection and Response <br> Microsoft Defender for Identity (Azure Advanced Threat Protection) <br> Microsoft Defender for Office 365</td>
+<td>Incident database <br> SIEM</td>
+</tr>
+<tr>
+<td>Malware Detection</td>
+<td>Microsoft Defender for Identity (Azure Advanced Threat Protection) <br> Microsoft Defender Antivirus <br> Microsoft Defender for Office 365 <br> Microsoft Defender for Endpoint</td>
+<td>Incident database</td>
+</tr>
+<tr>
+<td>Asset Management</td>
+<td>Microsoft Cloud App Security (MCAS) <br> Microsoft Intune <br> Microsoft Endpoint Configuration Manager</td>
+<td>Asset management registry</td>
+</tr>
+<tr>
+<td>Configuration Management</td>
+<td>Microsoft Secure Score <br> Security Center <br>  Compliance Center <br> Microsoft Attack Surface Reduction <br> Azure Active Directory Identity Protection <br> Azure Conditional Access <br> Azure Active Directory</td>
+<td>Agency configuration database <br> Certification and authorisation registry</td>
+</tr>
+<tr>
+<td>Network Management</td>
+<td>Microsoft Cloud App Security (MCAS) <br> Windows Defender Application Control <br> Conditional Access <br> Windows Firewall <br> Microsoft Intune <br> Microsoft Endpoint Configuration Manager</td>
+<td>Network perimeter firewall</td>
+</tr>
+<tr>
+<td>License Management</td>
+<td>Microsoft 365 Admin Center</td>
+<td>Software asset registry</td>
+</tr>
+<tr>
+<td>Information Management</td>
+<td>Microsoft Information Protection <br> Windows Information Protection <br> Information Protection (Office 365) <br> Retention Labels &amp; Policies <br> Microsoft Cloud App Security (MCAS)</td>
+<td>Data classification and categorization policies</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reference-data-sources">Reference data sources</h4>
+<p>The agency should consider monitoring updates to the below reference data sources to gather information on software and configuration vulnerabilities.</p>
+<p>To identify and assess known vulnerabilities, the agency should consider subscribing to receive <a href="https://www.microsoft.com/en-us/msrc/technical-security-notifications?rtc=1">security notifications</a> when relevant vulnerabilities are identified in Microsoft's tools and products. In addition, the agency should also consider subscribing to other vulnerability advisory services to receive vulnerability updates about any non-Microsoft applications they may utilise.</p>
+<p>To assess the security of their system's architecture, the agency should consider monitoring updates to the blueprint, relevant compliance standards and configuration benchmark advisories.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Reference Data Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vulnerability &amp; Patch Management</td>
+<td><a href="https://www.microsoft.com/en-us/msrc/technical-security-notifications?rtc=1">Microsoft Security Notification Service</a> <br> <a href="https://nvd.nist.gov/vuln/data-feeds">National Vulnerability Database</a> <br> <a href="https://www.cisa.gov/search?g=mailing-lists-and-feeds">US-CERT</a> <br> <a href="https://www.cyber.gov.au/about-us/register">ACSC Security Notifications</a> <br> <a href="https://www.auscert.org.au/resources/security-bulletins/">AusCERT</a></td>
+</tr>
+<tr>
+<td>Configuration Management</td>
+<td><a href="https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism">Australian Government Information Security Manual</a> <br> <a href="https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/essential-eight">ACSC Essential Eight</a> <br> <a href="https://www.cyber.gov.au/about-us/view-all-content/publications">ACSC Publications</a> <br> <a href="https://desktop.gov.au/">Protected Utility blueprint</a> <br> <a href="https://www.cisecurity.org/cis-benchmarks/">Center for Internet Security (CIS) Benchmarks</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="continuous-monitoring-information-elicitation-activities">Continuous monitoring information elicitation activities</h4>
+<p>To elicit information about potential vulnerabilities within the organisation's information security program, the agency should perform the below activities.</p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control effectiveness assessments</td>
+<td>This technique would elicit detail on the coverage, effectiveness, impact and efficiency of the agency's security controls</td>
+</tr>
+<tr>
+<td>Vulnerability scans</td>
+<td>Vulnerability scans can be performed to identify known vulnerabilities in the agency's deployed software or weaknesses in the system's configuration</td>
+</tr>
+<tr>
+<td>Vulnerability assessments or penetration tests</td>
+<td>Vulnerability scans can be performed to find known vulnerabilities in the agency's deployed software or weaknesses in the system's configuration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="timeframes-and-frequencies">Timeframes and frequencies</h3>
+<p>The CMP should outline when and how often effectiveness reviews and testing activities are performed for each security control and associated measurement. When determining timeframes and frequencies, the agency should establish achievable assessment frequencies commensurate with their risk appetite. Factors the agency may wish to consider when determining frequencies include:</p>
+<table>
+<thead>
+<tr>
+<th>Consideration</th>
+<th>Detail</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criticality of controls</td>
+<td>Is the control critical to the effectiveness of the security program? <br> Is the control critical to the agency's priorities?</td>
+<td>Controls providing highly critical functionality should be more frequently monitored</td>
+</tr>
+<tr>
+<td>Volatility of control</td>
+<td>Is the effectiveness of the security control likely to change as the system evolves?</td>
+<td>Controls expected to be volatile should be more frequently monitored</td>
+</tr>
+<tr>
+<td>Robustness of controls</td>
+<td>Does the control have any current weaknesses inhibiting its effectiveness?</td>
+<td>Controls with known weaknesses should be more frequently monitored until remediated</td>
+</tr>
+<tr>
+<td>Risk tolerance</td>
+<td>Does the timeframe align with the agency's risk tolerance?</td>
+<td>Agencies with higher risk tolerance could perform less frequent monitoring</td>
+</tr>
+<tr>
+<td>Threat advisories/Vulnerability information</td>
+<td>Has the agency received information that may impact the effectiveness of a control?</td>
+<td>An ad hoc control assessment may need to be performed or monitoring frequencies altered</td>
+</tr>
+<tr>
+<td>Regulatory requirements</td>
+<td>Do mandatory timeframes exist within the agency's regulatory requirements?</td>
+<td>The agency may need to alter timeframes to align with requirements</td>
+</tr>
+<tr>
+<td>Reporting Requirements</td>
+<td>Has the agency defined specific reporting requirements that need to be met?</td>
+<td>The agency may need to alter timeframes to align with requirements</td>
+</tr>
+</tbody>
+</table>
+<p>When defining assessment and response frequencies, the agency may specify tasks assigned to applicable roles defined in <a href="#roles-and-responsibilities">Roles and Responsibilities</a> section above. Examples of tasks include:</p>
+<ul>
+<li>Desktop teams will review Intune reports monthly, and</li>
+<li>Office 365 administrators will review Active Directory weekly.</li>
+</ul>
+<h4 id="required-ism-timeframes">Required ISM timeframes</h4>
+<p>For infrastructure under the control of the agency, such as on premises Exchange and Active Directory servers, the ISM specifies required timeframes for the activities defined in the below table:</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vulnerability scans</td>
+<td>At least monthly</td>
+</tr>
+<tr>
+<td>Vulnerability assessments or penetration tests</td>
+<td>At least monthly</td>
+</tr>
+<tr>
+<td>Review SOEs</td>
+<td>At least monthly</td>
+</tr>
+<tr>
+<td>Review security documentation</td>
+<td>At least monthly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="information-aggregation-storage-and-management">Information aggregation, storage and management</h3>
+<p>The CMP should document how information required for continuous monitoring will be stored and managed. This should include where information will be stored and relevant parties responsible for the information.</p>
+<h4 id="security-information-and-event-management-system-siem">Security Information and Event Management System (SIEM)</h4>
+<p>To enhance the ability to identify inappropriate or unusual activity, agencies may wish to integrate the analysis of vulnerability scanning information, network monitoring, and system log information through the use of a SIEM.</p>
+<h4 id="security-management-dashboards">Security management dashboards</h4>
+<p>Security management dashboards are virtual security management workspaces provided by Microsoft's customer security and compliance teams the agency could leverage Microsoft's security management dashboards to achieve automation of information aggregation.</p>
+<p>These solutions are integrated across Microsoft 365 services and provide actionable insights to help reduce risks and safeguard Microsoft 365 deployments. They provide the ability to aggregate and view monitoring information in a single location.</p>
+<table>
+<thead>
+<tr>
+<th>Dashboard</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft 365 Security Center</td>
+<td>Agencies can utilise <a href="https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center">Security Center</a> to view alerts and incidents related to their infrastructure and reports measures within Microsoft Secure Score. <br> Agencies can utilise <a href="https://docs.microsoft.com/microsoft-365/security/mtp/microsoft-secure-score?view=o365-worldwide">Secure Score</a> to determine the security baseline of their Microsoft 365 configuration. Secure Score can scan a Microsoft environment, assign an overall security score to the environment's configuration and provide recommendations to improve the security of the environment.</td>
+</tr>
+<tr>
+<td>Microsoft 365 Compliance Center</td>
+<td>Agencies can use <a href="https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-securitycompliance-center">Compliance Center</a> to track specific compliance issues and risks. Compliance Center also provides customisable policies which can alert agencies when Microsoft 365 contravenes a particular policy.</td>
+</tr>
+<tr>
+<td>Microsoft Cloud App Security Dashboard</td>
+<td>Agencies can utilise the Cloud App Security Dashboard to view security information of their cloud environment including open alerts, discovered apps, files infected with malware, azure security configuration recommendations and DLP alerts.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="analysis">Analysis</h3>
+<p>The CMP should document procedures for conducting analysis of collected information against defined measures. These processes could take the form of runbooks or work instructions. This would facilitate assessment of potential vulnerabilities or weaknesses in a manner that is repeatable and consistent.</p>
+<p>To analyse collected data, the agency should calculate the measurements that were defined as part of the <a href="#roles-and-responsibilities">Roles and Responsibilities</a> section. To perform this analysis, the agency may wish to refer to the example measurements analysis tables included in <a href="#attachment-a-measurementsmetrics-development-and-analysis-examples">Attachment A: Measurements/Metrics and Analysis Examples</a>.</p>
+<h3 id="response">Response</h3>
+<h4 id="assessment">Assessment</h4>
+<p>The CMP should set out the process for how identified system weaknesses and vulnerabilities will be prioritised for response. Once analysis has been completed and vulnerabilities are identified or controls do not meet their expected measurement target, the agency should assess and manage the risk involved utilising methods detailed in their Security Risk Management Plan (SRMP). Example details of the risk assessment table have been included in <a href="#attachment-c-risk-analysis-example">Attachment C: Findings Analysis Example</a>.</p>
+<p>The agency should undertake analysis which allows them to reach a thorough understanding of the potential impacts of identified vulnerabilities and the risk that is posed to the agency. This may include asking questions such as:</p>
+<ul>
+<li>What is the likelihood of the vulnerability being exploited?</li>
+<li>What happens/what is the impact if the vulnerability is exploited?</li>
+<li>How effective are current controls in reducing potential risk?</li>
+</ul>
+<p>Prior to the determination of a mitigating response, the agency should consider their risk tolerance levels and determine if other actions are appropriate such as:</p>
+<ul>
+<li>Accepting</li>
+<li>Transferring, or</li>
+<li>Avoiding the risk.</li>
+</ul>
+<p>Assessments should be conducted by suitably skilled personnel, where possible independent of the system owner or developer, or by a third party who is independent of the target of the assessment. Assessments may be performed by either using automated assessment tools or manually by appropriately skilled ICT professionals.</p>
+<p>When assessing vulnerabilities, the agency may consider vendor security bulletins or the severity ratings assigned to security vulnerabilities under schemes such as the Common Vulnerability Scoring System.</p>
+<h4 id="responsive-actions">Responsive actions</h4>
+<p>The CMP should document potential responsive actions. These may include actions such as system configuration changes, training, procuring security tools, changing system architecture, establishing new procedures or updating security policy documentation.</p>
+<p>When determining the appropriate responsive action, the agency should asking the following questions:</p>
+<ul>
+<li>What are the available mitigation techniques?</li>
+<li>How effective are those mitigations likely to be?</li>
+<li>Who is responsible for implementing any mitigations?</li>
+<li>What will the cost of implementing the mitigations be?</li>
+</ul>
+<p>When deciding on a responsive action, Agencies should consider change management and approval requirements.</p>
+<h4 id="prioritisation-of-response">Prioritisation of response</h4>
+<p>The CMP should outline how identified weaknesses and vulnerabilities will be prioritised based on their assessed risk or impact and the timeframes within which actions will be taken.</p>
+<p>The agency may wish consider the timeframes specified within the <a href="https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism/cyber-security-guidelines/guidelines-system-management">ISM</a> under which action must be taken as outlined in the below table.</p>
+<table>
+<thead>
+<tr>
+<th>Vulnerability Risk</th>
+<th>Timeframe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme</td>
+<td>48 hours</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Two Weeks</td>
+</tr>
+<tr>
+<td>Moderate</td>
+<td>Four Weeks</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Four Weeks</td>
+</tr>
+</tbody>
+</table>
+<p>Depending on the vulnerability identified and its severity, action may be required immediately or may be implemented over a period of time. Agencies should consider their risk tolerance levels and verify that processes exist to track the progress of remediation actions as they occur.</p>
+<h3 id="reporting">Reporting</h3>
+<p>The CMP should document requirements of reporting in relation to continuous monitoring. This may include details as set out in the below table.</p>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generating Reporting</td>
+<td>Specific personnel and roles responsible for generating reporting information</td>
+</tr>
+<tr>
+<td>Stakeholders and Audience</td>
+<td>Personnel and roles that will be receiving generated reporting</td>
+</tr>
+<tr>
+<td>Content and Format</td>
+<td>Content included in reporting and expected format the report will be presented in</td>
+</tr>
+<tr>
+<td>Reporting Frequency</td>
+<td>How often reporting is to be generated and sent to its audience</td>
+</tr>
+<tr>
+<td>Tools Used for Reporting</td>
+<td>Any tools used to generate or automate reporting</td>
+</tr>
+</tbody>
+</table>
+<p>Many of these details would be included in the analysis tables as shown in <a href="#attachment-a-measurementsmetrics-development-and-analysis-examples">Attachment A: Measurements/Metrics and Analysis Examples</a>.</p>
+<h3 id="review-and-update">Review and update</h3>
+<p>The CMP should outline when and under what conditions review and updates to the continuous monitoring strategy and approach will occur.
+Continuous monitoring processes should not be static, they should adapt based on changes in agency's threat and risk and when changes are made to desktop environment technology and architecture. The CMP should be reviewed to ensure that it supports the agency in operating within its acceptable risk tolerance levels, that chosen measurements remain relevant, and that data is current and complete.</p>
+<p>The agency should review the contents of the CMP annually or bi-annually.</p>
+<h2 id="attachment-a-measurementsmetrics-development-and-analysis-examples">Attachment A: Measurements/metrics development and analysis examples</h2>
+<p>Measures have been provided in this section as examples for how the agency could approach monitoring security controls. It is important to note that the agency should develop custom measurements, this list is for reference and is not intended to be exhaustive. These examples have been developed leveraging methods detailed in NIST 800-55 Performance Measurement Guide for Information Security.</p>
+<p>Additionally, this section identifies relevant guidance on identifying and populating required data collection details.</p>
+<h3 id="guidance">Guidance</h3>
+<p>Agencies may refer to above guidance on developing measures and populating information. These include:</p>
+<ul>
+<li><a href="#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li><a href="#measurements">Developing Measurements</a></li>
+<li><a href="#information-sources--collection">Data Collection Sources</a></li>
+<li><a href="#timeframes-and-frequencies">Collection and Reporting Frequencies</a></li>
+<li><a href="#reporting">Reporting Details</a></li>
+</ul>
+<h4 id="configuration-management-measurement-example">Configuration management measurement example</h4>
+<p>The below table provides an example configuration management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>CM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>All system users are identified and authenticated in accordance with the agency's information security policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 0974, 1173</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of accounts without MFA enabled</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>(Number of MFA-enabled accounts/total number of accounts) * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>CM-1.1 Number of users with access to the system. <br>CM-1.2 Number of users exempt from MFA requirements</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Active Directory, Azure Conditional Access Policies, Microsoft Security Center</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vulnerability-and-patch-management-measurement-example">Vulnerability and patch management measurement example</h4>
+<p>The below table provides an example vulnerability and patch management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>VPM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>All system vulnerabilities are identified and remediated in accordance with the agency's information security policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 0304, 1143, 1493, 1643</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of security vulnerabilities not mitigated</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>(Number of mitigations (patches or other) applied + Number of vulnerabilities accepted within risk tolerance) / (Total number of system vulnerabilities) * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>VPM-1.1 Number of vulnerabilities identified through advisories. <br>VPM-1.2 Number of vulnerabilities identified through vulnerability scanning activities. <br> VPM-1.3 Number of mitigations (patches or other) applied. <br>VPM-1.4 Number of vulnerabilities determined not applicable. <br> VPM-1.5 Number of vulnerabilities accepted within risk tolerance</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Software Registry, Vulnerability Database, Patch Management Database, Microsoft Intune, Microsoft Defender for Endpoint</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="event-incident-management-measurement-example">Event &amp; incident management measurement example</h4>
+<p>The below table provides an example event and incident management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>EIM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Security incidents are reported within timeframes defined in the agency's Incident Response Policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 0123, 0125, 0140</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of incidents reported within acceptable timeframes (calculated for each incident category)</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>For each incident category (number of incidents reported within agency defined timeframes / number of reported incidents) * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>EIM-1.1 Number of incidents reported for: <br> Category 1: (Incident category defined in agency's IRP) <br> Category 2: (Incident category defined in agency's IRP) <br> Category N: (Incident category defined in agency's IRP) <br> <br> EIM-1.2 Of incidents reported for each category, how many were reported within agency defined timeframes? <br>Category 1: (Incident category defined in agency's IRP) <br> Category 2: (Incident category defined in agency's IRP) <br> Category N: (Incident category defined in agency's IRP)</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Incident database</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="malware-detection-measurement-example">Malware detection measurement example</h4>
+<p>The below table provides an example malware detection measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>MD-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Effectively detect and prevent instances of malware installation/execution</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 1288</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Calculated or each malware detection tool (percentage (%) of malware detection false positives.)</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>For each malware detection tool (Number of alerts identified as false positives / Number of alerts) * 100)</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>MD-1.1 Number of malware detection alerts marked as false positives for: <br> <Tool 1> <br> <Tool 2> <br> <Tool 3> <br> <br> MD-1.2 Total number of malware detection alerts for: <br> <Tool 1> <br> <Tool 2> <br> <Tool 3></td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Microsoft Defender Antivirus, Microsoft Defender for Endpoint, agency specific malware and endpoint detection tools</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="asset-management-measurement-example">Asset management measurement example</h4>
+<p>The below table provides an example asset management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>AM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>All devices are managed within the agency's device management policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 1533, 1195, 1482, 0869, 1085, 1202</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of managed endpoints not compliant with MDM security policy</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Implementation</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>(Number of managed endpoints identified as out-of-compliance / Total number of managed endpoints) * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>Number of managed endpoints identified as out-of-compliance <br>Total number of managed endpoints</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Microsoft Intune, Microsoft Endpoint Configuration Manager, Asset Management Register</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="network-management-measurement-example">Network management measurement example</h4>
+<p>The below table provides an example network management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>NM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>All devices are managed in accordance with the agency's Asset Management Policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 1301, 1418</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of devices discovered on the network that are unrecognised</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>Number of unrecognised devices discovered on the network / Total number of discovered devices * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>Number of unrecognised devices discovered during network discovery. <br> Total number of devices discovered during network discovery</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Asset Management List, Microsoft Defender for Endpoint, Microsoft Endpoint Manager</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="license-management-measurement-example">License management measurement example</h4>
+<p>The below table provides an example license management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>LM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Software lifecycle is effectively managed in accordance with the agency's Information Security Policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 1467, 1483, 1407</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Percentage (%) of deployed software that has reached End of Support</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>Number of software license versions that have reached End of Support / Total number of software licenses * 100</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Percentage (%) target defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>Number of software license versions that have reached End of Support. <br> Number of software licenses</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>Software Registry, Microsoft Defender for Endpoint</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="information-management-measurement-example">Information management measurement example</h4>
+<p>The below table provides an example information management measure.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure ID</td>
+<td>IM-1</td>
+</tr>
+<tr>
+<td>Goal</td>
+<td>Information is identified and protected in accordance with the agency's information security policy</td>
+</tr>
+<tr>
+<td>Related Controls</td>
+<td>ISM 1187, 1297, 0663</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>Number of data loss prevention policy exceptions granted during monitoring period</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Effectiveness/Efficiency</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>Total number of policy exceptions granted during monitoring period</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>(Target total defined in accordance with agency risk tolerance)</td>
+</tr>
+<tr>
+<td>Implementation Evidence</td>
+<td>Policy exceptions granted during monitoring period</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Collection frequency: (e.g. monthly) <br> Reporting frequency: (e.g. monthly)</td>
+</tr>
+<tr>
+<td>Responsible Parties</td>
+<td>Applicable roles and responsibilities, e.g. collector, owner, stakeholders</td>
+</tr>
+<tr>
+<td>Data Source</td>
+<td>MCAS, Microsoft Defender for Endpoint, MIP</td>
+</tr>
+<tr>
+<td>Reporting Format</td>
+<td>(Agency's preferred reporting method i.e. bar graph in Monthly Health Check report)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attachment-b-data-collection-example">Attachment B: Data collection example</h3>
+<p>This section provides an example data collection table the agency may wish to utilise to record data collection details. Additionally, this section identifies relevant guidance on identifying and populating required data collection details.</p>
+<h4 id="guidance_1">Guidance</h4>
+<p>For each measurement, the agency should create data collection tables for each item under “Implementation Evidence”.</p>
+<p>The following lists sections the agency may refer to for guidance developing measures and populating information:</p>
+<ul>
+<li><a href="#roles-and-responsibilities">Roles and Responsibilities</a></li>
+<li><a href="#information-sources--collection">Data Collection Sources</a></li>
+<li><a href="#timeframes-and-frequencies">Collection and Reporting Frequencies</a></li>
+</ul>
+<h4 id="data-collection-table-example">Data collection table example</h4>
+<p>The below table provides an example table the agency may wish to utilise to record data collection details.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relevant Measurement</td>
+<td>CM-1</td>
+</tr>
+<tr>
+<td>Information Detail</td>
+<td>List of users without MFA enabled</td>
+</tr>
+<tr>
+<td>Collection Frequency</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Source Tool</td>
+<td>Active Directory</td>
+</tr>
+<tr>
+<td>Information Owner</td>
+<td>(Agency team or position responsible for the tool)</td>
+</tr>
+<tr>
+<td>Role Responsible for Collection</td>
+<td>(Agency specific role assigned to this task)</td>
+</tr>
+<tr>
+<td>Information Collection Method</td>
+<td>Agency specific process to elicit this information. Examples are: <br> * Process for logging in to Azure admin portal and performing manual inspection; or, <br> - Process for eliciting information through PowerShell script</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attachment-c-risk-analysis-example">Attachment C: Risk analysis example</h3>
+<p>This section provides an example risk analysis table that the agency may wish to utilise when determining and prioritising a response. Additionally, this section identifies relevant guidance on risk analysis and response.</p>
+<h4 id="guidance_2">Guidance</h4>
+<p>The below lists sections the agency may refer to for guidance developing measures and populating information;</p>
+<ul>
+<li><a href="#information-sources--collection">Relevant Assets to Each Security Domain</a></li>
+<li><a href="#response">Response Assessment and Prioritisation</a></li>
+</ul>
+<h4 id="risk-assessment-table-example">Risk assessment table example</h4>
+<p>Example detail the agency could capture is provided in the below table. For more detail, and the Risk Matrix refer to the <a href="../security-risk-management-plan/">blueprint's Security Risk Management Plan (SRMP)</a> or <a href="../hybrid-security-risk-management-plan/">Hybrid (SRMP)</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk Overview</td>
+<td>Brief risk statement</td>
+</tr>
+<tr>
+<td>Assets affected</td>
+<td>List of assets impacted by the risk</td>
+</tr>
+<tr>
+<td>Threat sources</td>
+<td>Types of threat actors (e.g. Adversarial – Trusted Insider)</td>
+</tr>
+<tr>
+<td>Threat events</td>
+<td>Events that may occur as a result of this risk being realized</td>
+</tr>
+<tr>
+<td>Inherent likelihood</td>
+<td>Likelihood rating without controls considered</td>
+</tr>
+<tr>
+<td>Inherent consequence</td>
+<td>Consequence rating without controls considered</td>
+</tr>
+<tr>
+<td>Inherent risk rating</td>
+<td>Result from comparing Likelihood and Consequence on Risk Matrix</td>
+</tr>
+<tr>
+<td>Ongoing and completed treatments</td>
+<td>Treatments being implemented to address the risk</td>
+</tr>
+<tr>
+<td>Residual likelihood</td>
+<td>Likelihood rating with current controls considered</td>
+</tr>
+<tr>
+<td>Residual Consequence</td>
+<td>Consequence rating with current controls considered</td>
+</tr>
+<tr>
+<td>Residual risk rating</td>
+<td>Result from comparing Likelihood and Consequence on Risk Matrix</td>
+</tr>
+<tr>
+<td>Proposed treatments</td>
+<td>Risk mitigation treatments for consideration</td>
+</tr>
+<tr>
+<td>Target likelihood</td>
+<td>Desired likelihood rating with proposed treatments considered</td>
+</tr>
+<tr>
+<td>Target consequence</td>
+<td>Desired consequence rating with proposed treatments considered</td>
+</tr>
+<tr>
+<td>Target risk rating</td>
+<td>Result from comparing Likelihood and Consequence on Risk Matrix</td>
+</tr>
+</tbody>
+</table>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/martincaddick/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -1,0 +1,2203 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://martincaddick.github.io/security/hybrid-incident-response-plan/">
+      
+      
+        <link rel="prev" href="../incident-response-plan/">
+      
+      
+        <link rel="next" href="../hybrid-security-risk-management-plan/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
+    
+    
+      
+        <title>Hybrid incident response plan - Get Security Done</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hybrid-incident-response-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Get Security Done" class="md-header__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Get Security Done
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hybrid incident response plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Get Security Done
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Get Security Done" class="md-nav__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Get Security Done
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Get Security Done
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Get Security Done
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blueprint/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blueprint
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential eight maturity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/client-devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abbreviations and acronyms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blueprint/solution-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solution overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../patterns/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/bring-your-own-device/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bring your own device
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/azure-virtual-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure virtual desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../continuous-monitoring-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous monitoring plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../incident-response-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident response plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hybrid incident response plan
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid incident response plan
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incident-response-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident response plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incident response plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection and analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-defender-for-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft Defender for Endpoint
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft Defender for Endpoint">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incident-criticality-assignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incident criticality assignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-service-outages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure service outages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Azure service outages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-365-service-outages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft 365 service outages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft 365 service outages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containment-eradication-and-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containment, eradication, and recovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Containment, eradication, and recovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defender-for-endpoint-threat-remediation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defender for Endpoint threat remediation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-remediation-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated remediation notification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated remediation notification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-incident-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-incident activity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordination-with-external-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordination with external resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coordination with external resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-support-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft support requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#australian-cyber-security-centre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Australian Cyber Security Centre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid system security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud assessment and authorisation alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wdac-policy-creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wdac policy creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-enrolment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune enrolment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin disable inactive users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/conditional-access-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional access policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-task-sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid task sequence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-network-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid network configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-software-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune software updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-compliance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wfw-rules-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wfw rules import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../news/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    News
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/october2023newsupdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    October 2023 update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/urlerrors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urlerrors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enhanced MFA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/windows-11-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing the blueprint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/wip-guidance-2023-11-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Information Protection guidance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<hr />
+<h1 id="hybrid-incident-response-plan">Hybrid incident response plan</h1>
+<p id="date-and-time">23 minutes to read - 30 March 2023</p>
+
+<p>This Incident Response Plan (IRP) has been prepared to support to the Digital Transformation Agency (DTA) HybridSystem. The document provides guidance for responding to cyber security incidents that may occur in relation to an Agency’s operation of the HybridSystem.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The purpose of this IRP is to provide guidance to Agencies operating the HybridSystem including how to detect cyber security incidents, how to respond and remediate them, along with how to reduce the risk of an incident re-occurring in the future.</p>
+<h2 id="scope">Scope</h2>
+<p>The scope of this IRP is specific to the use of Microsoft 365 services as part of the HybridSystem. As such it is termed a system-specific IRP and is designed to be subordinate to an Agency’s overarching IRP. As a result, this IRP does not directly address topics that it is reasonable to assume are discussed in an Agency-level IRP.</p>
+<p>The HybridSystem IRP is a living document. It is anticipated that, over time, amendments and updates will be applied to the HybridSystem IRP specific to agency business needs and lessons learnt from cyber incidents.</p>
+<h2 id="incident-response-plan">Incident response plan</h2>
+<p>This Incident Response Plan (IRP) is based on the four step National Institute of Standards and Technology (NIST) incident response life cycle as documented in <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final">Special Publication 800-61 Revision 2</a>. The four steps of the process are illustrated in Figure 1 and are:</p>
+<ul>
+<li>Preparation</li>
+<li>Detection &amp; Analysis</li>
+<li>Containment, Eradication, and Recovery</li>
+<li>Post-Incident Activity.</li>
+</ul>
+<p><a class="glightbox" href="../../img/security/cloud-incident-response-process.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 1 Incident Response Process" data-desc-position="bottom"><img alt="Figure 1 Incident Response Process" src="../../img/security/cloud-incident-response-process.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 1 Incident Response Process
+</p>
+
+<p>Each of the four incident response phases are detailed in the following sections of this document.</p>
+<h3 id="preparation">Preparation</h3>
+<p>The preparation phase of the incident response life cycle is a shared responsibility between the project team and Agency cyber security personnel. The project team is responsible for the design, implementation, and security assessment of the solution. This includes performing a risk assessment and determining which specific Information Security Manual (ISM) controls to implement to reduce and manage the risk of security incidents. The following documentation has been produced for the HybridSystem and it is recommended that the Agencies cyber security personnel familiarise themselves with the content to aid them in their preparation to manage an incident:</p>
+<ul>
+<li>Blueprint – Solution Overview which describes the solution, which features have been enabled/disabled for the Agency, and how the solution has been structured.</li>
+<li>Blueprint – Platform Design which describes the technologies used that make up the ‘platform’ portion of the solution and how they are implemented.</li>
+<li>Blueprint – Client Devices Design which describes the technologies used that make up the Windows 10 portion of the solution and how it is implemented.</li>
+<li>Blueprint – Office 365 Design which describes the technologies used that make up the Office 365 portion of the solution and how it is implemented.</li>
+<li>Hybrid Blueprint – Security Risk Management Plan (SRMP) which includes the details of the risk assessment performed and the recommended treatments.</li>
+<li>Hybrid Blueprint – System Security Plan (SSP) which describes how controls identified in the SSP Annex are implemented by the system.</li>
+<li>Hybrid Blueprint – System Security Plan Annex (September 2021) which states the compliance of the solution with the September 2021 version of the ISM.</li>
+<li>Hybrid Blueprint – Standard Operating Procedures which describe the steps required to perform multiple operational tasks within the environment.</li>
+</ul>
+<p>In addition to having ongoing access to the above documentation it is assumed that Agency cyber security personnel have access to tools and resources as described in the Agency IRP. Specific resources that are also required by Agency cyber security personnel to detect and respond to security incidents include:</p>
+<ul>
+<li>Access to the various Microsoft management portal required to administer the blueprint, as listed below in Table 1</li>
+<li>Membership of the role(s) required to perform any actions related to the incident</li>
+</ul>
+<p style="text-align: center;">
+Table 1 Microsoft Management Portals
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Portal</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft 365 Defender portal</td>
+<td><a href="https://security.microsoft.com">https://security.microsoft.com</a></td>
+</tr>
+<tr>
+<td>Defender for Cloud Apps portal</td>
+<td><a href="https://portal.cloudappsecurity.com">https://portal.cloudappsecurity.com</a></td>
+</tr>
+<tr>
+<td>Azure portal (including Azure AD)</td>
+<td><a href="https://portal.azure.com">https://portal.azure.com</a></td>
+</tr>
+<tr>
+<td>Microsoft 365 compliance portal</td>
+<td><a href="https://compliance.microsoft.com">https://compliance.microsoft.com</a></td>
+</tr>
+<tr>
+<td>Microsoft 365 admin center</td>
+<td><a href="https://admin.microsoft.com/">https://admin.microsoft.com/</a></td>
+</tr>
+<tr>
+<td>Defender for Identity portal</td>
+<td><a href="https://portal.atp.azure.com">https://portal.atp.azure.com</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="detection-and-analysis">Detection and analysis</h3>
+<p>Multiple detection methods are available to the Agency’s cyber security personnel to aid them in discovering and categorising security incidents. These detection methods include:</p>
+<ul>
+<li>Alerts from Azure AD (including Azure AD Identity Protection) including risky sign-ins and users flagged for risk.</li>
+<li>Azure AD logs stored in Azure and available via the portal, including the audit log for all administrative activities relating to Azure AD.</li>
+<li>Defender for Office 365 alerts and reports for each of the configured capabilities including Safe Attachments, Safe Links, Safe Attachments for SharePoint, OneDrive and Microsoft Teams, and Anti-phishing in Defender for Office 365 protection.</li>
+<li>Microsoft Defender for Endpoint including the Security Operations, Incidents, and Alerts Queue dashboards which provide tailored information and actions for cyber security personnel.</li>
+<li>Defender for Identity provides User Entity Behavioural Analytics (UEBA) by monitoring authentication requests to on-premises Active Directory (AD) Domain Controllers (DCs). </li>
+<li>Microsoft Defender for Cloud Apps Threat Detection, Privileged Accounts, and Access Control dashboards spanning the whole Microsoft 365 deployment, along with configurable email alerts and automatic response capabilities.</li>
+<li>Local Windows 10 events logs written to each Windows 10 endpoint including authentication attempts, firewall activities, and Windows Defender Application Control (WDAC) events.</li>
+</ul>
+<p>Due to its containment, eradication and recovery capabilities in addition to its detection and analysis functionality, Microsoft Defender for Endpoint is the primarily incident response tool for the hybridsystem and is described in further detail in the section below.</p>
+<h3 id="microsoft-defender-for-endpoint">Microsoft Defender for Endpoint</h3>
+<p>The HybridSystem leverages Microsoft Defender for Endpoint to monitor, detect, investigate, and respond to threats targeting Windows 10 endpoints. When an alert is triggered of sufficient severity, an email is automatically sent to a specified recipient email address (typically the Agency cyber security team mailbox or similar). Additional email recipients can be configured as required.</p>
+<h4 id="recommendation">Recommendation</h4>
+<p>Agency should ensure a recipient email address (typically the Agency cyber security team mailbox or similar) shared with multiple users is created and monitored.</p>
+<p>The majority of alerts generated within the Microsoft 365 Defender portal – which include Microsoft Defender for Endpoint alerts – relate to automatically detected issues and are informational in nature. This means that they are not necessarily harmful to the system but must be reviewed and accounted for. Alerts are organised by severity as they enter the ‘Alerts queue’, the severity of which is detailed below in Table 2.</p>
+<p style="text-align: center;">
+Table 2 Microsoft 365 Defender Alert Severities
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High</td>
+<td>Threats marked as 'High' have the potential to cause severe damage to the system and devices using it. These alerts must be treated with urgency.</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Threats marked as 'Medium' must be treated with some importance but typically will indicate anomalous behaviour within the environment such as the execution of suspicious files, un-sanctioned registry changes, or observed behaviours typical of a cyber threat or attack.</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>'Low' urgency threats will typically be identified as commercial/known malware or hacking tools, their function is generally well understood and the ability to stop it is high.</td>
+</tr>
+<tr>
+<td>Informational</td>
+<td>'Informational' alerts are those that might not be considered harmful to the network but are good to track.</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 2 shows an example of an alert from Defender for Endpoint which detected a suspicious sequence of activities and automatically generated an incident detailing the severity, timestamps, devices affected, applications called, and more.</p>
+<p><a class="glightbox" href="../../img/security/suspicious-sequence-activities.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 2 Suspicious sequence of activities" data-desc-position="bottom"><img alt="Figure 2 Suspicious sequence of activities" src="../../img/security/suspicious-sequence-activities.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 2 Suspicious sequence of activities
+</p>
+
+<p>When the Agency's cyber security personnel receive an alert, they should perform analysis to determine the cause and any potential impact, including recommended actions within the Microsoft 365 Defender portal. If an alert occurs during an approved change window and relates directly to the contents of the change, for example an unapproved/not allowed executable runs during an application deployment, then it is unlikely that a security incident has occurred. However, if an alert is triggered outside of a change window and without an obvious cause then the probability of the event being a security incident is probable.</p>
+<p>Note, Microsoft assign a criticality to each alert based on an internal rating system. It is up to the Agency’s cyber security team to make their own assessment of the criticality of all potential security incidents in accordance with the Agency’s overarching IRP.</p>
+<p>The assignment of criticality to an incident is an important step and due care must be applied to avoid the risks associated with both under and over classifying an incident. If there is ever any doubt, cyber security personnel should always investigate further.</p>
+<p>The alerts captured in the Microsoft 365 Defender portal should be leveraged by Agency cyber security personnel to detect and analyse potential security incidents. The Microsoft 365 Defender portal provides far deeper detail than is available from the email alerts, these emails should only serve as a cursory notification, not an in-depth analysis of the incident.</p>
+<p>Within the Microsoft 365 Defender portal there are two capabilities that should be utilised by Agency cyber security personnel for the purpose of detection and analysis of incidents on a day-to-day basis.</p>
+<ul>
+<li>Incidents lists all automatically generated incidents detected by Defender for Endpoint - along with Defender for Office 365, Defender for Identity and Defender for Cloud Apps, including the severity of the incident, the machines and users involved, last activity, assignment of the incident, et cetera. All incidents should be assigned as they are generated and managed based on the Agency’s operating procedures by cyber security personnel.</li>
+<li>Alerts queue lists all alerts based on the alert type not the incident case that is generated, this can be supremely helpful when attempting to identify patterns of behaviour. This alerts queue will also sort by severity, which incident it is related to, status, and investigation state.</li>
+</ul>
+<p>For both the Incidents and Alerts queue Agency cyber security personnel can select individual records to access detailed information on the specific activity.</p>
+<h4 id="incident-criticality-assignment">Incident criticality assignment</h4>
+<p>Regardless of the detection source for a potential incident, all incidents should be assigned a criticality in a consistent manner. In accordance with guidance issued by the Chief Information Security Officer (CISO) or other personnel responsible for the daily operational information security of the Agency, all incidents should be assigned a system specific criticality. The criticality ratings for incidents have been developed from a number of Federal Government Agencies’ overarching risk frameworks, specifically the consequence definitions. These definitions are listed below in Table 3.</p>
+<p>Note, if incident criticality definitions are included in the Agency IRP cyber security personnel should use those in preference to the criticalities defined below. The Business Impact Levels (BILs) defined in the Protective Security Policy Framework (PSPF) should also be considered in the assessment of incident criticalities.</p>
+<p style="text-align: center;">
+Table 3 Incident Criticality Definitions
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Incident Criticality</th>
+<th>Performance Metrics</th>
+<th>Reputational Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extreme</td>
+<td>Major impact on departmental outcomes and performance<br><br>Requires major additional management effort by Senior Executive to control the impact<br><br>Unavailability of agency mission critical systems including the delivery of Government outcomes (e.g. a public facing system that is used in emergency procedures, a grants system<br><br>Catastrophic breach and or loss and or destruction of agency information containing sensitive and personal information of Australian citizens and or classified information</td>
+<td>Significant adverse publicity<br><br>Loss of stakeholder confidence requiring intervention by Secretary<br><br>Reporting to accountable authorities outside of the Agency e.g. Privacy Commissioner, Minister of Department etc</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Moderate impact on achievement of outcomes and performance<br><br>Requires additional management effort by business area, Senior Executive to control the impact</td>
+<td>Substantial adverse publicity<br><br>Loss of stakeholder confidence requiring intervention at Executive level</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Minor impact on achievement of outcomes and performance<br><br>Requires additional management effort within the business area to control the impact</td>
+<td>Some adverse publicity<br><br>Minor loss of stakeholder confidence</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Insignificant impact on achievement of outcomes and performance</td>
+<td>Some adverse publicity<br><br>Minor loss of stakeholder confidence</td>
+</tr>
+</tbody>
+</table>
+<p>Agency cyber security personnel should use the above table to define the criticality of incidents based on the data available to them at the time of detection and analysis. If this data is updated or found to be inaccurate Agency cyber security personnel should re-assess the criticality of the related incident(s). The criticality of an incident should be used to determine the resources, timeframes and reporting requirements related to it.</p>
+<h4 id="azure-service-outages">Azure service outages</h4>
+<p>An additional data source that can be leveraged by Agency cyber security personnel when analysing potential security incidents is the Azure status dashboard. This dashboard is published by Microsoft and reports on the current status of all Azure-based services, including any current warnings or errors. An example of the dashboard is shown below in Figure 3.</p>
+<p>The Azure status dashboard is available at <a href="https://status.azure.com/">https://status.azure.com/</a> and does not require the user to be logged into Azure to view the current status.</p>
+<p><a class="glightbox" href="../../img/security/azure-status-dashboard.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 3 Azure Status Dashboard" data-desc-position="bottom"><img alt="Figure 3 Azure Status Dashboard" src="../../img/security/azure-status-dashboard.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 3 Azure Status Dashboard
+</p>
+
+<p>Agency cyber security personnel can use the dashboard to determine if a potential incident is local to the Agency’s system or is a widespread issue affecting the underlying Azure service(s).</p>
+<h5 id="recommendation_1">Recommendation</h5>
+<p>It is recommended that at least one Agency cyber security personnel member is subscribed to the provided Rich Site Summary (RSS) feed to receive updates whenever an Agency-leveraged service is affected.</p>
+<h4 id="microsoft-365-service-outages">Microsoft 365 service outages</h4>
+<p>Agency cyber security personnel should review the Microsoft 365 service status (including all Office 365 services) when investigating an incident relating to availability. The following resources are available from Microsoft to identify the status of Microsoft 365 services:</p>
+<ul>
+<li><a href="https://portal.office.com/adminportal/home#/servicehealth">Microsoft 365 Service health status</a></li>
+<li><a href="https://twitter.com/msft365status?lang=en">Microsoft 365 Status Twitter</a></li>
+</ul>
+<p>In the first instance the Microsoft 365 Service health status page should be consulted, followed by the Microsoft 365 Status Twitter account. If no issues are identified by either of these resources, then Agency-specific scenarios should be explored such as loss of Internet connect, Local Area Network (LAN) outage, etc.</p>
+<p>As an example of how to navigate the Microsoft 365 Service health status page, please refer to Figure 4 below.</p>
+<p><a class="glightbox" href="../../img/security/o365-service-outages.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 4 Office 365 Service Outages" data-desc-position="bottom"><img alt="Figure 4 Office 365 Service Outages" src="../../img/security/o365-service-outages.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 4 Office 365 Service Outages
+</p>
+
+<p>Agency cyber security personnel can use the dashboard to determine if a service is down, whether the issue is widespread and affecting the underlying services, or whether there is no identified outage. This page can also be used to review ongoing service advisories such as those identified below in Figure 5.</p>
+<p><a class="glightbox" href="../../img/security/o365-service-health-advisories.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 5 Office 365 Service Health Advisories" data-desc-position="bottom"><img alt="Figure 5 Office 365 Service Health Advisories" src="../../img/security/o365-service-health-advisories.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 5 Office 365 Service Health Advisories
+</p>
+
+<h5 id="recommendation_2">Recommendation</h5>
+<p>It is recommended that at least one Agency cyber security team member, or another person assigned with cyber security responsibilities, review these services daily to ensure there are no ongoing service outages that will affect the availability.</p>
+<h3 id="containment-eradication-and-recovery">Containment, eradication, and recovery</h3>
+<p>The Agencies cyber security teams’ approach to containment, eradication, and recovery – particularly in relation to resource allocation and priority – should be based on the category of the incident as previously described. However, regardless of the criticality of an incident the basic actions that are required to address the incident are dependent on the specific incident type.</p>
+<p>This IRP defines specific incident types that are directly related to the solution, namely:</p>
+<ul>
+<li>Violation of confidentiality of Agency data stored in Office 365 (including Exchange Online)</li>
+<li>Violation of integrity and/or confidentiality of Azure AD accounts</li>
+<li>Violation of integrity of Azure AD configuration</li>
+<li>Violation of integrity of Office 365 configuration</li>
+<li>Loss of availability of Agency data stored in Office 365</li>
+</ul>
+<p>The following table provides recommendations for the containment, eradication, and recovery activities associated with the above incident types:</p>
+<p style="text-align: center;">
+Table 4 Incident Containment, Eradication, and Recovery Activities
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Incident type</th>
+<th>Containment, Eradication, and Recovery Activities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation of confidentiality of Agency data stored in Office 365<br>(For example, sensitive information is sent outside the organisational boundaries – data spill)</td>
+<td><strong>Containment</strong> – Data Loss Prevention (DLP) policies are in place across Microsoft Teams, Exchange Online, SharePoint Online, and Outlook. All data stored in these corporate data locations is backed by policies to block the egress of what is identified as ‘sensitive’. Note, if DLP policies have been disabled or modified they should be re-enabled and verified by referring to the relevant ABAC.<br><br><strong>Eradication</strong> – DLP policies automatically block messages from being sent or redacts and obfuscates data attempting to leave organisational boundaries.<br><br><strong>Recovery</strong> – Recovery of sensitive information is automated by DLP. User notifications are linked to DLP policies upon creation. The Agency cyber security team should review DLP policies often to ensure they align with business needs. New policies should be created based on commonly used applications within the organisation.</td>
+</tr>
+<tr>
+<td>Violation of integrity and/or confidentiality of Azure AD account(s)<br>(For example, user or administrative account compromised)</td>
+<td><strong>Containment</strong> – Compromised account credentials can result in catastrophic damage to the system if the account in question has administrative privileges, and breaches of sensitive data. To contain this, Conditional Access and Multi-Factor Authentication (MFA) are employed to control access to all accounts, even if account credentials are compromised. Agency cyber security personnel can perform a global account sign-out and password reset if an account is suspected of being compromised.<br><br><strong>Eradication</strong> – Compromised accounts can be disabled from log-ins, passwords reset, and global sign-outs initiated. Agency cyber security personnel should review Azure AD logs to identify the source of the breach from an identity perspective. They should also review sharing audit logs against SharePoint Online and OneDrive for Business prior to the user being given their account credentials back. Additionally, a full audit of the user’s log-in habits should be performed to ensure they comply with Agency security requirements.<br><br><strong>Recovery</strong> – Once the incident has been remediated the users account should be re-enabled, password reset, and access granted. Simultaneous to this, the Agency cyber security team are to review all appropriate logs dependant on the breach.</td>
+</tr>
+<tr>
+<td>Violation of integrity of Azure AD configuration<br>(For example, unapproved changes are made to Conditional Access policies)</td>
+<td><strong>Containment</strong> – Unauthorised changes to Conditional Access policies can result in gaps within the approved authentication process. To prevent these changes Privileged Identity Management should be utilised to only grant temporary permissions to perform privileged tasks.<br><br><strong>Eradication</strong> – Agency cyber security personnel should revert any changes made to the configuration in alignment with the configuration outlined in the ‘Platform – Detailed Design’ and ‘Conditional Access – ABAC’ documents.<br><br><strong>Recovery</strong> – Ensure all changes have been reverted, to ensure this has been completed successfully refer to the design and ABAC documents. Once the change(s) have been reverted any further authentication attempts will need to pass the conditional access policies. Measures should be in place to record any security incidents and unexpected changes to the configuration due to lack of knowledge.</td>
+</tr>
+<tr>
+<td>Violation of integrity of Office 365 configuration<br>(For example, DLP or retention policies are disabled or modified without authorisation)</td>
+<td><strong>Containment</strong> – DLP and retention policies are in place to ensure sensitive data does not improperly leave organisational boundaries. DLP is controlled by Azure AD permissions, as such, all access to it should be controlled by Privileged Identity Management (PIM). In the event of an incident PIM can be used to restrict administrative privileges to prevent further changes and provide an audit log of previous actions.<br><br><strong>Eradication</strong> – Agency cyber security personnel should revert any changes made to the configuration in alignment with the configuration in the ‘Office 365 – Detailed Design’ document. The Azure AD and PIM logs should be scrutinised to review by whom the unapproved change was made.<br><br><strong>Recovery</strong> – Ensure all changes have been reverted, to ensure this has been completed successfully refer to the design and ABAC documents. Agency cyber security personnel should review the last modified time of the affected policy and align it with PIM logs. A review of all privileged users and groups is recommended.</td>
+</tr>
+<tr>
+<td>Loss of availability of Agency data stored in Office 365<br>(For example, the Microsoft Teams service is unavailable, and critical corporate data cannot be accessed)</td>
+<td><strong>Containment</strong> – Service availability within the Office 365 and Azure environments is very high, if however, a service is offline or otherwise inaccessible, the Agency cyber security team should ensure the status of the service via the Microsoft 365 Service Health Status portal (see: Microsoft 365 Service Outages). If Microsoft Teams is inaccessible, secondary pathways to the data should be explored, for example, accessing the Teams back-end SharePoint Online site.<br><br><strong>Eradication</strong> – Not applicable for availability incidents.<br><br><strong>Recovery</strong> – The service is controlled by Microsoft and its availability is backed by Microsoft service level agreements.</td>
+</tr>
+</tbody>
+</table>
+<p>Note, the activities listed above are designed to aid Agency cyber security personnel in responding to the specific incident types defined. However, this is not an exhaustive list of all possible responses. Agency cyber security personnel should use their judgement to determine if they are appropriate to a specific incident or if other actions should be taken.</p>
+<h4 id="defender-for-endpoint-threat-remediation">Defender for Endpoint threat remediation</h4>
+<p>Defender for Endpoint provides the ability to automate responses to detected threats, reducing the total response time for an incident and eliminating the need for manual actions to be taken by the Agency’s cyber security team. Five levels of automation are available as listed below:</p>
+<ul>
+<li>No automated response – automated investigations are not run, and all activities must be performed by the Agency’s cyber security team.</li>
+<li>Semi (any folder) – approval is required from the cyber security team for all remediation activities suggested as part of an automated investigation.</li>
+<li>Semi (non-temp folders) – remediation occurs automatically for temporary folders including users’ download folders, remediation for other locations requires approval.</li>
+<li>Semi (core folders) – remediation occurs automatically for all folders other than operating system directories (e.g. Program Files and Window).</li>
+<li>Full – all remediation activities are performed automatically.</li>
+</ul>
+<p>The hybridsystem uses the default Defender for Endpoint configuration for automated investigations, namely Full automation. Therefore, Agency cyber security personnel will not be prompted to approve remediation activities that are recommended as part of Defender for Endpoint automated investigations. The automation level can be adjusted if required based on the specific requirements of the Agency’s cyber security personnel.</p>
+<p>Note, prior to early 2021, the default configuration was Semi (any folder).</p>
+<h4 id="automated-remediation-notification">Automated remediation notification</h4>
+<p>Depending on the nature of the initial alert, if Microsoft Defender for Endpoint detects a threat and it is resolved automatically it will notify administrators by sending a follow up email. An example of an alert resolution email is shown below in Figure 6.</p>
+<p><a class="glightbox" href="../../img/security/alert-resolution-email.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 6 Alert Resolution Email" data-desc-position="bottom"><img alt="Figure 6 Alert Resolution Email" src="../../img/security/alert-resolution-email.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 6 Alert Resolution Email
+</p>
+
+<p>Agency cyber security personnel should be aware of these notifications but should not rely on them as a trigger to cease investigation and/or recovery activities. </p>
+<h5 id="recommendation_3">Recommendation</h5>
+<p>It is recommended that Agency cyber security personnel verify that an incident resulting from alert is actually resolved before moving to the post-incident phase.</p>
+<h3 id="post-incident-activity">Post-incident activity</h3>
+<p>In accordance with the Agency’s overarching IRP recommendation, ‘lessons learnt’ meetings should be held after all major incidents. However, for incidents it is recommended that one of these meetings is held after every incident. This provides an opportunity to assess the current controls in place and evaluate if additional controls can be applied to prevent or minimise the effect of a similar incident occurring again.</p>
+<p>Due to the regular update cadence for Azure and Office 365, new features are made available monthly. This often includes Preview features in Azure that provide enhanced capabilities but are still under development by Microsoft. One of the goals of the post-incident meetings should be to assess newly released and preview features for their potential to reduce the risk of the incident re-occurring. This may require specialist resources to attend to present newly available features and discuss how implementing them may reduce the risk to the system. </p>
+<p>Note, new capabilities and services – including all Preview features – should be assessed by Agency cyber security personnel before being enabled.</p>
+<p>Figure 7 illustrates how a preview feature is presented in the Azure portal using the “… (Preview)” suffix to the feature/service name.</p>
+<p><a class="glightbox" href="../../img/security/azure-ad-preview.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 7 Azure AD Preview Feature" data-desc-position="bottom"><img alt="Figure 7 Azure AD Preview Feature" src="../../img/security/azure-ad-preview.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 7 Azure AD Preview Feature
+</p>
+
+<p>Note, as of the time of writing the Azure AD Identity Secure Score feature is no longer in preview and is generally available for all tenants.</p>
+<p>The outcomes of all post-incident meetings should be recorded in the report prepared for each incident. This ensures there is a document chain of events for the incident including tasks that will now be undertaken due to the analysis of the incident, but potentially not directly related (for example applying an additional control to prevent a future incident). This report may be the subject of an internal or external audit in accordance with the Agencies reporting requirements and therefore should be treated as a formally controlled document and stored in accordance with existing policies. Additionally, any information collected as part of the incident response should be either be directly included in the report, or its storage location referenced, as applicable.</p>
+<p>All other aspects of the ‘lessons learnt’ meetings and reporting requirements should be undertaken in accordance with the recommendations provided in the Agency’s overarching IRP.</p>
+<h2 id="coordination-with-external-resources">Coordination with external resources</h2>
+<p>In some cases, Agency cyber security personnel may require the assistance of additional external resources to aid in one or more phases of the Incident Response Life Cycle. When this is required, Agency cyber security personnel should follow existing Agency policies and procedures to appropriately engage and communicate with external resources to assist with incident management and response.</p>
+<h3 id="microsoft-support-requests">Microsoft support requests</h3>
+<p>With the introduction of Azure AD an additional external resource becomes available to assist Agency cyber security personnel manage and respond to security incidents. Microsoft Support Requests can be made from within the Azure Portal to report issues and access assistance with all Azure hosted services, including Azure AD, Azure MFA, and Conditional Access. Support Requests are associated with Azure Subscriptions, and a user must have ‘write permissions’ for the subscription to raise a support request.</p>
+<p>The New support request wizard provides a three-step process to detail and submit new support requests via the Azure Portal. The three steps are:</p>
+<ul>
+<li>Basics – which includes the issue type (most likely to be technical if raised in relation to a security incident), the subscription affected and the specific service. This is illustrated below in Figure 8.</li>
+<li>Problem – which includes a technical description of the issue/incident including severity, problem type, category, title, and details. It also provides fields to identify when the problem started and provide the option for the user to upload a file.</li>
+<li>Contact information – which includes contact details for a Microsoft engineer to use to assist with the support request. Depending on the reported severity of the issue the Preferred contact method and Response may be auto-filled (for example, high severity requests default to phone and 24x7 respectively).</li>
+</ul>
+<p><a class="glightbox" href="../../img/security/new-support-request.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 8 New Support Request" data-desc-position="bottom"><img alt="Figure 8 New Support Request" src="../../img/security/new-support-request.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 8 New Support Request
+</p>
+
+<p>The progress of support requests can also be tracked from within the Azure Portal under the Help + support page. This is illustrated below in Figure 9.</p>
+<p><a class="glightbox" href="../../img/security/all-support-requests.png#center" data-type="image" data-width="100%" data-height="auto" data-title="Figure 9 All Support Requests" data-desc-position="bottom"><img alt="Figure 9 All Support Requests" src="../../img/security/all-support-requests.png#center" /></a></p>
+<p style="text-align: center;">
+Figure 9 All Support Requests
+</p>
+
+<p>For more information on creating Azure support requests, including any updates to the process, refer to <a href="https://docs.microsoft.com/en-au/azure/azure-supportability/how-to-create-azure-support-request">Create an Azure support request</a>.</p>
+<h3 id="australian-cyber-security-centre">Australian Cyber Security Centre</h3>
+<p>In the case where an incident has not been able to be resolved using the steps defined previously, the ACSC may be engaged by agency approved staff as per the Agency’s overarching IRP.</p>
+<p>An incident can be reported to the ACSC via the following methods:</p>
+<ul>
+<li>Website - <a href="https://www.cyber.gov.au/about-us/about-asd-acsc/contact-us#no-back">https://www.cyber.gov.au</a></li>
+<li>Phone number – 1300 CYBER1 (1300 292 371)</li>
+<li>Email – <a href="mailto:asd.assist@defence.gov.au">asd.assist@defence.gov.au</a></li>
+</ul>
+<p>Note, reporting an incident via the phone is preferred when the incident is considered urgent by the Agency.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/martincaddick/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+    
+  
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
