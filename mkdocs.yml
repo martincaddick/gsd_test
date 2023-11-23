@@ -23,7 +23,7 @@ nav:
     - Partner Content: 'partner.md'
 
 # Configuration
-repo_url: https://github.com/dcaddick/gsd_public
+repo_url: https://github.com/martincaddick/gsd_test
 repo_name: "Get Security Done"
 theme:
   name: material
@@ -83,7 +83,7 @@ plugins:
   - git-revision-date-localized:
       # fallback_to_build_date: true
       enable_creation_date: true
-      timezone: Australia/Perth
+      timezone: Australia/Sydney
   - glightbox:
       auto_caption: true
   #- social
@@ -106,30 +106,30 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-  analytics:
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/thumb-down-outline
-          name: This page could be improved
-          data: 0
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-    provider: google
-    property: G-QS5J5W9G3Q
+  # analytics:
+  #   feedback:
+  #     title: Was this page helpful?
+  #     ratings:
+  #       - icon: material/thumb-up-outline
+  #         name: This page was helpful
+  #         data: 1
+  #         note: >-
+  #           Thanks for your feedback!
+  #       - icon: material/thumb-down-outline
+  #         name: This page could be improved
+  #         data: 0
+  #         note: >- 
+  #           Thanks for your feedback! Help us improve this page by
+  #           using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  #   provider: google
+  #   property: G-QS5J5W9G3Q
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/dcaddick/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/dcaddick
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/dcaddick/
+      link: https://github.com/martincaddick/
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/dcaddick
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://linkedin.com/in/dcaddick/
 
 # Markdown Extensions 
 markdown_extensions:
