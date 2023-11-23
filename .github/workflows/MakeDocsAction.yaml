@@ -1,0 +1,60 @@
+# This is a basic workflow to help you get started with Actions
+name: MakeDocs
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      #- name: Install plugins
+      #  run: | 
+      #    python -m pip install --upgrade pip setuptools wheel
+      #    pip install pillow cairosvg
+      #    pip install mkdocs-minify-plugin==0.3.0
+      #    pip install mkdocs-plugin-progress
+      #    pip install mkdocs-techdocs-core
+      #    pip show --verbose mkdocs-techdocs-core
+      #    pip install mkdocs-git-revision-date-localized-plugin
+      #    pip show --verbose mkdocs-git-revision-date-localized-plugin
+      #    pip show --verbose mkdocs-material --version
+        # pip install mkdocs-table-reader-plugin
+        # pip install mkdocs-glightbox
+
+      - name: Build and push docs
+        uses: athackst/mkdocs-simple-plugin@11e81727cdfac8b224da1bb486d7072da6c5cd5d
+        with:
+        #   # (optional) Specify branch 
+        #   publish_branch: main # gh-pages 
+          # (optional) The URL of the repository the docs should point to
+          repo_url: https://github.com/martincaddick/gsd_test
+          # (optional) The URL of the site
+          site_url: https://martincaddick.github.io
+          # (optional) The edit URI
+          edit_uri: edit/main/
+        #   # (optional) Specify a google analytics key 
+        #   # google_analytics: G-QS5J5W9G3Q
+        #   # (optional) Specify a different theme [mkdocs|readthedocs|material]
+          theme: material
+        #   # (optional) Load a configuration file from a string
+          config: "mkdocs.yml"
+        #   # (optional) Version or alias.  Specify multiple aliases with space
+        #   # example: version: v0.1.0 latest
+        #   version: latest
+        #   # (optional) The version that will be served by the root of your site
+        #   default_version: latest
+        #   # (optional) Whether to push the docs to the remote branch
+        #   # push: 1
