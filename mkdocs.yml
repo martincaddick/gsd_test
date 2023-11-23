@@ -1,26 +1,26 @@
 # Most settings taken from https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
 site_name: "Get Security Done"
 
-# Left hand Navigation menu
-nav:
-    - About this Project: 'README.md'
-    - Author(s): 'Author.md' 
-    - Assumed Knowledge: 'AssumedKnowledge.md'
-    - General Identity Tips: 'Identity.md'
-    - Original GSD project in one Page: 'GSD.md'
-    - 1. Microsoft Defender for Identity (MDI): 'MDI.md'
-    - 2. Conditional Access (CA): 'CondAccess.md'
-    - 3. Microsoft Defender for Cloud Apps (MDCA): 'MDCA.md'
-    - 4. Microsoft Defender for Endpoint (MDE): 'MDE.md'
-    - 5. Microsoft Defender for Office (MDO): 'MDO.md'
-    - 6. Microsoft Defender for Cloud (MDC): 'MDC.md'
-    - 7. Microsoft Sentinel Content: 'Sentinel.md'
-    - 8. Microsoft Information Protection (MIP/AIP): 'MIP.md'
-    - 9. ASD/ACSC Essential 8 & Hardening Guides: 'ASD.md'
-    - 10. Windows Defender App Control (WDAC): 'WDAC.md'
-    - Ninja Security Training Content: 'Ninja.md'
-    - Security Interactive Guides & Product Trials: 'Guides.md'
-    - Partner Content: 'partner.md'
+# # Left hand Navigation menu
+# nav:
+#     - About this Project: 'README.md'
+#     - Author(s): 'Author.md' 
+#     - Assumed Knowledge: 'AssumedKnowledge.md'
+#     - General Identity Tips: 'Identity.md'
+#     - Original GSD project in one Page: 'GSD.md'
+#     - 1. Microsoft Defender for Identity (MDI): 'MDI.md'
+#     - 2. Conditional Access (CA): 'CondAccess.md'
+#     - 3. Microsoft Defender for Cloud Apps (MDCA): 'MDCA.md'
+#     - 4. Microsoft Defender for Endpoint (MDE): 'MDE.md'
+#     - 5. Microsoft Defender for Office (MDO): 'MDO.md'
+#     - 6. Microsoft Defender for Cloud (MDC): 'MDC.md'
+#     - 7. Microsoft Sentinel Content: 'Sentinel.md'
+#     - 8. Microsoft Information Protection (MIP/AIP): 'MIP.md'
+#     - 9. ASD/ACSC Essential 8 & Hardening Guides: 'ASD.md'
+#     - 10. Windows Defender App Control (WDAC): 'WDAC.md'
+#     - Ninja Security Training Content: 'Ninja.md'
+#     - Security Interactive Guides & Product Trials: 'Guides.md'
+#     - Partner Content: 'partner.md'
 
 # Configuration
 repo_url: https://github.com/martincaddick/gsd_test
