@@ -48,18 +48,13 @@ theme:
   # favicon: assets/favicon.png
 #   icon:
 #     logo: logo
-# docs_dir: docs
+docs_dir: docs
 # Plugins
 plugins:
   - search
   - simple
-  #- simple:
-  #    include_extensions:
-  #    - ".git/**"
-  # - git-authors:
-  #     show_contribution: true
-  #     show_line_count: true
-  #     show_email_address: true
+  - mike:
+    canonical_version: latest
   - git-revision-date-localized:
       fallback_to_build_date: true
       enable_creation_date: true
@@ -78,40 +73,6 @@ plugins:
 extra:
   version:
     provider: mike
-#   consent:
-#     actions:
-#       - accept
-#       - manage
-#     title: Cookie consent
-#     description: >- 
-#       We use cookies to recognize your repeated visits and preferences, as well
-#       as to measure the effectiveness of our documentation and whether users
-#       find what they're searching for. With your consent, you're helping us to
-#       make our documentation better.
-  # analytics:
-  #   feedback:
-  #     title: Was this page helpful?
-  #     ratings:
-  #       - icon: material/thumb-up-outline
-  #         name: This page was helpful
-  #         data: 1
-  #         note: >-
-  #           Thanks for your feedback!
-  #       - icon: material/thumb-down-outline
-  #         name: This page could be improved
-  #         data: 0
-  #         note: >- 
-  #           Thanks for your feedback! Help us improve this page by
-  #           using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-  #   provider: google
-  #   property: G-QS5J5W9G3Q
-  # social:
-  #   - icon: fontawesome/brands/github
-  #     link: https://github.com/dcaddick/
-  #   - icon: fontawesome/brands/twitter
-  #     link: https://twitter.com/dcaddick
-  #   - icon: fontawesome/brands/linkedin
-  #     link: https://linkedin.com/in/dcaddick/
 
 # Markdown Extensions 
 markdown_extensions:
@@ -134,3 +95,4 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - mkdocs-click
