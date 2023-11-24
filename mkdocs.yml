@@ -56,16 +56,16 @@ plugins:
   #- simple:
   #    include_extensions:
   #    - ".git/**"
-  - git-authors:
-      show_contribution: true
-      show_line_count: true
-      show_email_address: true
+  # - git-authors:
+  #     show_contribution: true
+  #     show_line_count: true
+  #     show_email_address: true
   - git-revision-date-localized:
       fallback_to_build_date: true
       enable_creation_date: true
       timezone: Australia/Sydney
-  - glightbox:
-      auto_caption: true
+  # - glightbox:
+  #     auto_caption: true
   #- social
   #- awesome-list
   #- table-reader - DON'T use, relys on pandas, too heavy for this
