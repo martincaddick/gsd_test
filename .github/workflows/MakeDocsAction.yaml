@@ -35,7 +35,7 @@ jobs:
         # pip install mkdocs-glightbox
 
       - name: Build and push docs
-        uses: athackst/mkdocs-simple-plugin
+        uses: athackst/mkdocs-simple-plugin@v3.1.0
         with:
         #   # (optional) Specify branch 
         #   publish_branch: main # gh-pages 
