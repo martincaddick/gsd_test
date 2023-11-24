@@ -1,222 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/essential-eight-maturity/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/essential-eight-maturity/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/platform/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/platform/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/office-365/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/office-365/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/security/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/security/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/client-devices/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/client-devices/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/abbreviations-and-acronyms/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/abbreviations-and-acronyms/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/automation/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/automation/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/as-built-as-configured/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/as-built-as-configured/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/blueprint/solution-overview/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/blueprint/solution-overview/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/patterns/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/patterns/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/patterns/bring-your-own-device/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/patterns/bring-your-own-device/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/patterns/azure-virtual-desktop/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/patterns/azure-virtual-desktop/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/standard-operating-procedures/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/standard-operating-procedures/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/security-risk-management-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/security-risk-management-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/continuous-monitoring-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/continuous-monitoring-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/incident-response-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/incident-response-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/hybrid-incident-response-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-incident-response-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/hybrid-security-risk-management-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-security-risk-management-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/hybrid-system-security-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-system-security-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/hybrid-standard-operating-procedures/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/hybrid-standard-operating-procedures/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/system-security-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/system-security-plan/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/security/cloud-assessment-and-authorisation-alignment/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/security/cloud-assessment-and-authorisation-alignment/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/platform/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/platform/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/wdac-policy-creation/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/wdac-policy-creation/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/office-365/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/office-365/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/intune-enrolment/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-enrolment/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/admin-disable-inactive-users/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/admin-disable-inactive-users/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/conditional-access-policies/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/conditional-access-policies/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/hybrid-task-sequence/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/hybrid-task-sequence/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/hybrid-network-configuration/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/hybrid-network-configuration/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/intune-software-updates/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-software-updates/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/intune-compliance/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-compliance/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/intune-applications/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-applications/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/wfw-rules-import/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/wfw-rules-import/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/as-built-as-configured/intune-configuration/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-configuration/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/october2023newsupdate/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/october2023newsupdate/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/enhanced-mfa-2023-01-16/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/enhanced-mfa-2023-01-16/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/windows-11-2023-04-23/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/windows-11-2023-04-23/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/intro-the-blueprint-2023-04-23/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/intro-the-blueprint-2023-04-23/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://oobecomau.github.io/theblueprint/news/wip-guidance-2023-11-13/</loc>
+         <loc>https://martincaddick.github.io/gsd_test/news/wip-guidance-2023-11-13/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
