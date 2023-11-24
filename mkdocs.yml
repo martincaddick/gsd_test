@@ -75,7 +75,9 @@ plugins:
   #- minify 
 
 # Customization
-# extra:
+extra:
+  version:
+    provider: mike
 #   consent:
 #     actions:
 #       - accept
