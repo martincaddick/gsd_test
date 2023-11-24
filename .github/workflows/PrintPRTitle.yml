@@ -3,11 +3,13 @@ on:
   pull_request:
     types: [opened,synchroize]
 jobs:
-  # print_title:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Print PR Title
-  #       run: echo "The title name of the PR is: ${{ github.event.pull_request.title }}
+  print_title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print PR Title
+        run: |
+          echo "The title name of the PR is: ${{ github.event.pull_request.title }}"
+      
   create_branch:
     runs-on: ubuntu-latest
     steps:
