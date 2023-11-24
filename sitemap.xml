@@ -1,147 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://martincaddick.github.io/readme/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://martincaddick.github.io/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/blueprint/essential-eight-maturity/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/platform/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/office-365/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/security/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/client-devices/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/abbreviations-and-acronyms/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/automation/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/as-built-as-configured/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/blueprint/solution-overview/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/patterns/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/patterns/bring-your-own-device/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/patterns/azure-virtual-desktop/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/standard-operating-procedures/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/security-risk-management-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/continuous-monitoring-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/incident-response-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/hybrid-incident-response-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/hybrid-security-risk-management-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/hybrid-system-security-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/hybrid-standard-operating-procedures/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/system-security-plan/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/security/cloud-assessment-and-authorisation-alignment/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/platform/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/wdac-policy-creation/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/office-365/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-enrolment/</loc>
+         <loc>https://martincaddick.github.io/readme/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -156,22 +21,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/hybrid-task-sequence/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://martincaddick.github.io/as-built-as-configured/hybrid-network-configuration/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-software-updates/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/intune-compliance/</loc>
+         <loc>https://martincaddick.github.io/as-built-as-configured/hybrid-task-sequence/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -181,7 +36,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/as-built-as-configured/wfw-rules-import/</loc>
+         <loc>https://martincaddick.github.io/as-built-as-configured/intune-compliance/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -191,7 +46,82 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/october2023newsupdate/</loc>
+         <loc>https://martincaddick.github.io/as-built-as-configured/intune-enrolment/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/as-built-as-configured/intune-software-updates/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/as-built-as-configured/office-365/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/as-built-as-configured/platform/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/as-built-as-configured/wdac-policy-creation/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/as-built-as-configured/wfw-rules-import/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/abbreviations-and-acronyms/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/as-built-as-configured/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/automation/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/client-devices/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/essential-eight-maturity/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/office-365/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/platform/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/security/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/blueprint/solution-overview/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -206,17 +136,87 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://martincaddick.github.io/news/windows-11-2023-04-23/</loc>
-         <lastmod>2023-11-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://martincaddick.github.io/news/intro-the-blueprint-2023-04-23/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://martincaddick.github.io/news/october2023newsupdate/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/news/windows-11-2023-04-23/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://martincaddick.github.io/news/wip-guidance-2023-11-13/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/patterns/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/patterns/azure-virtual-desktop/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/patterns/bring-your-own-device/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/cloud-assessment-and-authorisation-alignment/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/continuous-monitoring-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/hybrid-incident-response-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/hybrid-security-risk-management-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/hybrid-standard-operating-procedures/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/hybrid-system-security-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/incident-response-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/security-risk-management-plan/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/standard-operating-procedures/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://martincaddick.github.io/security/system-security-plan/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
