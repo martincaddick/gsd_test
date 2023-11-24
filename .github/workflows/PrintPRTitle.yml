@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print PR Title
-        run: echo "The title name of the PR is" ${{github.event.pull_request.title }}"
+        run: echo "The title name of the PR is: ${{ github.event.pull_request.title }}"
   create_branch:
     runs-on: ubuntu-latest
     steps:
