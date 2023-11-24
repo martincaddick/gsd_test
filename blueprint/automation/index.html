@@ -1,0 +1,2231 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://martincaddick.github.io/blueprint/automation/">
+      
+      
+        <link rel="prev" href="../as-built-as-configured/">
+      
+      
+        <link rel="next" href="../client-devices/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Automation - The blueprint for Review</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--<type>:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The blueprint for Review" class="md-header__button md-logo" aria-label="The blueprint for Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The blueprint for Review
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    The blueprint for Review
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../readme/" class="md-tabs__link">
+        
+  
+    
+  
+  Readme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-tabs__link">
+          
+  
+    
+  
+  As built as configured
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Blueprint
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          
+  
+    
+  
+  News
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
+          
+  
+    
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../security/cloud-assessment-and-authorisation-alignment/" class="md-tabs__link">
+          
+  
+    
+  
+  Security
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The blueprint for Review" class="md-nav__button md-logo" aria-label="The blueprint for Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    The blueprint for Review
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/martincaddick/gsd_test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    The blueprint for Review
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Readme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin disable inactive users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/conditional-access-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditional access policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-network-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid network configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/hybrid-task-sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid task sequence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-compliance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune compliance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-enrolment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune enrolment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/intune-software-updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intune software updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wdac-policy-creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wdac policy creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../as-built-as-configured/wfw-rules-import/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wfw rules import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blueprint
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abbreviations-and-acronyms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abbreviations and acronyms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../as-built-as-configured/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    As built as configured
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-powershell-desired-state-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows PowerShell Desired State Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-and-access-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity and access management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exchange Online
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-365-desired-state-configuration-implementation-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft 365 Desired State Configuration implementation procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft 365 Desired State Configuration implementation procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration file development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration file development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-data-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration data file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-configuration-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint configuration scripts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificate-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Certificate creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment troubleshooting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-365-desired-state-configuration-auditing-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microsoft 365 Desired State Configuration auditing procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microsoft 365 Desired State Configuration auditing procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint-audit-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint audit baseline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-devices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client devices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../essential-eight-maturity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential eight maturity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../office-365/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Office 365
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../platform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solution overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../news/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    News
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enhanced MFA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducing the blueprint
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/october2023newsupdate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    October 2023 update
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/windows-11-2023-04-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/wip-guidance-2023-11-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows Information Protection guidance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../patterns/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Patterns
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/azure-virtual-desktop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure virtual desktop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/bring-your-own-device/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bring your own device
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud assessment and authorisation alignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/continuous-monitoring-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous monitoring plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/hybrid-incident-response-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid incident response plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/hybrid-security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/hybrid-standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/hybrid-system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hybrid system security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/incident-response-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Incident response plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/security-risk-management-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security risk management plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/standard-operating-procedures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard operating procedures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/system-security-plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System security plan
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<hr />
+<h1 id="automation">Automation</h1>
+<p id="date-and-time">9 minutes to read - 30 March 2023</p>
+
+<p>Microsoft offers programmatic and manual methods to getting and setting configuration within Microsoft Azure and Microsoft 365. This document focuses on the programmatic configuration utilising <a href="https://microsoft365dsc.com/">Microsoft 365 Desired State Configuration (M365DSC)</a>. M365DSC is an open source tool hosted on GitHub and maintained by Microsoft engineers and the community. It is able to configure settings within all major Microsoft 365 workloads such as Exchange Online, Teams, Power Platforms, SharePoint and Security and Compliance. A list of configurable resources within these workloads is available on the <a href="https://github.com/Microsoft/Microsoft365DSC/wiki/Resources-List">M365DSC website</a>. M365DSC leverages Windows PowerShell Desired State Configuration. </p>
+<p>Currently, M365DSC is not able to fully configure a tenant to the specifications outlined in the blueprint. Configurations that cannot be configured via this method may need to be configured either manually or via another method such as the native M365 configuration PowerShell modules outside of DSC or Azure Command Line Interface.</p>
+<h2 id="windows-powershell-desired-state-configuration">Windows PowerShell Desired State Configuration</h2>
+<p>Windows PowerShell Desired State Configuration is a feature of PowerShell version 4.0 and later. It leverages a Configuration Script, Resources, and the <a href="https://docs.microsoft.com/en-us/powershell/scripting/dsc/managing-nodes/metaconfig?view=powershell-7.1">Local Configuration Manager</a> on a Windows machine. </p>
+<p>The Configuration Script is a declarative PowerShell script which defines and configures resource instances. Resources contain the code required to configure and maintain the configuration in a specified state. The Local Configuration Manager is the engine which facilitates the interaction between resources and configurations. </p>
+<p>Windows PowerShell Desired State Configuration can be leveraged to implement and ensure configurations are maintained in their preferred state. The Local Configuration Manager can be configured to poll the configuration on a set time interval and alert or re-enforce if configuration drift has occurred. For details regarding the Local Configuration Manager on a computer, run the following command in a PowerShell console:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Get-DscLocalConfigurationManager</span>
+</code></pre></div>
+<h2 id="scope">Scope</h2>
+<p>The following blueprint components are available for automation. We hope to expand this list over time as the options mature. If you would like your script included in the blueprint, please let us know by raising a <a href="https://github.com/govau/desktop.gov.au/issues">ticket in GitHub</a>.</p>
+<ul>
+<li>Identity and access management</li>
+<li>Exchange Online</li>
+</ul>
+<h2 id="identity-and-access-management">Identity and access management</h2>
+<p>The following table outlines the subsections of the blueprint and their automation status for identity and access management.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Automated / Manual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conditional Access</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Group Naming Policy</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Groups Settings</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Group Lifecycle Policy</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Group Creation</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Sensitivity labels</td>
+<td>Automated (separate DSC script)</td>
+</tr>
+<tr>
+<td>Directory Contact Details</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>User Settings</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Device Settings</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>External Collaboration</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Custom Domains</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Company Branding</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Group Creation Restrictions</td>
+<td><a href="../../as-built-as-configured/platform/#delegate-office-365-group-creation">Platform ABAC - delegate 365 group creation script</a></td>
+</tr>
+<tr>
+<td>Azure Active Directory Connect (if applicable)</td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exchange-online">Exchange Online</h2>
+<p>The following table outlines the subsections of the blueprint and their automation status for Exchange Online. Configuration of Exchange Online is completed after identity and access management.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Automated / Manual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connectors</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>DKIM</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Accepted domains</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Remote domains (Default)</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>CAS mailbox plan</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Per mailbox attributes</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Authentication policy</td>
+<td><a href="../../as-built-as-configured/office-365/#authentication-policy">Office 365 ABAC - authentication policy</a></td>
+</tr>
+<tr>
+<td>Outlook Web Access policy</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Mailbox archive</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Mailbox auditing</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Mailflow rules</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td>Anti-spam connection filter</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Anti-spam policies</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Anti-malware policies</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Anti-phishing policies</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Safe-links and Safe attachments</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Hybrid configuration</td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<h2 id="microsoft-365-desired-state-configuration-implementation-procedure">Microsoft 365 Desired State Configuration implementation procedure</h2>
+<p>The following procedure is to <strong>implement</strong> a configuration using Microsoft 365 Desired State Configuration.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>An account with Global Administrator privileges</li>
+<li>Pre-creation of the break glass/emergency admin accounts</li>
+<li>An account with a PowerShell execution policy of unrestricted</li>
+<li>A device with PowerShell Remoting enabled, internet access, and PowerShell 4.0 or greater installed</li>
+<li>Microsoft Graph for PowerShell app registration is available in the Azure AD tenant</li>
+<li>Device with WinRM configured with a HTTPS listener</li>
+</ul>
+<h3 id="procedure">Procedure</h3>
+<p>The process to enforce a Microsoft 365 Desired State Configuration (M365DSC) can be broken down into 3 parts:</p>
+<ol>
+<li>Configuration file development</li>
+<li>Certificate creation</li>
+<li>Configuration deployment</li>
+</ol>
+<p>If the certificate creation part is skipped, the configuration file (MOF file) will contain credentials in <strong>clear text</strong>. Also the <code>CertificateFile</code> value within <code>configurationdata.psd1</code> would require removal.</p>
+<h4 id="configuration-file-development">Configuration file development</h4>
+<p>The configuration files developed in accordance with the blueprint are available below. The configuration data file is required no matter the configuration script used.</p>
+<h5 id="configuration-data-file">Configuration data file</h5>
+<p>The required <code>configurationdata.psd1</code> file for the M365DSC methods can be downloaded below:</p>
+<ul>
+<li><a href="../../files/automation/configurationdata.txt">configurationdata.psd1</a></li>
+</ul>
+<h5 id="blueprint-configuration-scripts">Blueprint configuration scripts</h5>
+<p>Blueprint configuration scripts are available in the table below.</p>
+<p>Note, each DSC script can be ran independently.</p>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Configuration items</th>
+<th>Method</th>
+<th>Script parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../files/automation/identity_dsc.txt">identity_dsc.ps1</a></td>
+<td>Conditional Access<br>Group Naming Policy<br>Named Locations<br>Group Lifecycle Policy<br>Group Creation<br>Groups Settings<br>Directory Contact Details</td>
+<td>M365DSC</td>
+<td>-trustedip<br>-organisation <br>-organisationprefix<br>-globaladminaccount<br>-technicalcontactemail<br>-technicalcontactphone<br></td>
+</tr>
+<tr>
+<td><a href="../../files/automation/sensitivity-labels_dsc.txt">sensitivity-labels_dsc.ps1</a></td>
+<td>Sensitivity labels</td>
+<td>M365DSC</td>
+<td>-globaladminaccount</td>
+</tr>
+<tr>
+<td><a href="../../files/automation/exo_dsc.txt">exo_dsc.ps1</a></td>
+<td>Anti-spam policies<br/>Anti-malware policies<br/>Anti-phishing policies<br/>Safe-links and Safe attachments<br/>Outlook Web Access policy<br/>CAS mailbox plan</td>
+<td>M365DSC</td>
+<td>-gatewayip<br/>-organisation <br/>-globaladminaccount<br/>-technicalcontactemail</td>
+</tr>
+</tbody>
+</table>
+<h4 id="certificate-creation">Certificate creation</h4>
+<p>The process to create a certificate is as follows:</p>
+<ol>
+<li>Open a PowerShell console as administrator</li>
+<li>Install and import the PowerShell module <code>microsoft365dsc</code> using the following command:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">install-module</span> <span class="n">microsoft365dsc</span> <span class="n">-allowclobber</span> <span class="n">-force</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">import-module</span> <span class="n">microsoft365dsc</span>
+</code></pre></div></li>
+<li>In PowerShell navigate to the directory containing the blueprint configuration PS1 file and the <code>configurationdata.psd1</code> file</li>
+<li>Create a Desired State Configuration local configuration manager certificate:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Set-M365DSCAgentCertificateConfiguration</span>
+</code></pre></div></li>
+<li>Validate that a certificate was created and assigned to the local configuration manager by matching the output of step 4 with <code>CertificateID</code> from the following:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Get-DscLocalConfigurationManager</span>
+</code></pre></div></li>
+<li>Export the certificate into the folder containing the blueprint configuration PS1 file and the <code>configurationdata.psd1</code> file
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">$certificatethumbprint</span> <span class="p">=</span> <span class="nb">Get-DscLocalConfigurationManager</span> <span class="p">|</span> <span class="nb">select </span><span class="n">CertificateID</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nv">$certpath</span> <span class="p">=</span>  <span class="s2">&quot;cert:\localmachine\My\&quot;</span> <span class="p">+</span> <span class="nv">$certificatethumbprint</span><span class="p">.</span><span class="n">CertificateID</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">$cert</span> <span class="p">=</span> <span class="nb">Get-ChildItem</span> <span class="n">-path</span> <span class="nv">$certpath</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">Export-Certificate</span> <span class="n">-Cert</span> <span class="nv">$cert</span> <span class="n">-FilePath</span> <span class="p">.\</span><span class="n">M365dsc_DER</span><span class="p">.</span><span class="n">cer</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">certutil</span> <span class="n">-encode</span> <span class="n">M365dsc_DER</span><span class="p">.</span><span class="n">cer</span> <span class="n">m365dsc</span><span class="p">.</span><span class="n">cer</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">remove-item</span> <span class="p">.\</span><span class="n">M365dsc_DER</span><span class="p">.</span><span class="n">cer</span>
+</code></pre></div></li>
+</ol>
+<h4 id="configuration-deployment">Configuration deployment</h4>
+<p>The process to deploy the configuration is as follows:</p>
+<ol>
+<li>Open a PowerShell console as administrator</li>
+<li>Install and import the PowerShell module microsoft365dsc using the following command:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Set-WSManQuickConfig</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">install-module</span> <span class="n">microsoft365dsc</span> <span class="n">-allowclobber</span> <span class="n">-force</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">import-module</span> <span class="n">microsoft365dsc</span>
+</code></pre></div></li>
+<li>In PowerShell navigate to the directory containing the blueprint configuration PS1 file and the <code>configurationdata.psd1</code> file. This <code>configurationdata.psd1</code>  file is the same for all other DSC scripts supplied</li>
+<li>In the PowerShell console, initiate the desired blueprint configuration PS1 and supply the required values, this will create the MOF file for the local configuration manager. If the script requires parameters, the required values are located in the <code>param</code> section of the DSC script to be ran. Some DSC scripts may not require parameters, refer to the <code>Blueprint configuration scripts</code> table for an overview. The following is an example for the identity configuration DSC script <code>identity_dsc.ps1</code>. In this example, the required values are: Global Admin credentials; organisation name; organisation prefix; and trusted IPs (in CIDR format).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">$pscredential</span> <span class="p">=</span> <span class="nb">get-credential</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">$organisationname</span> <span class="p">=</span> <span class="s2">&quot;OrganisationName&quot;</span> <span class="c"># note - organisation internet domain name</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">$organisationprefix</span> <span class="p">=</span> <span class="s2">&quot;OrganisationAcronym&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nv">$technicalcontactemail</span> <span class="p">=</span> <span class="s2">&quot;Organisation.Helpdesk&quot;</span>  <span class="c"># note - recipient part of address</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nv">$technicalcontactphone</span> <span class="p">=</span><span class="s2">&quot;+612111222&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nv">$trustedIPs</span> <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;X.X.X.X/X&quot;</span><span class="p">,</span><span class="s2">&quot;X.X.X.X/X&quot;</span><span class="p">)</span> <span class="c"># note - for one CIDR range use @(&quot;X.X.X.X/X&quot;)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">.\</span><span class="n">identity_dsc</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-globaladminaccount</span> <span class="nv">$pscredential</span> <span class="n">-trustedip</span> <span class="nv">$trustedIPs</span> <span class="n">-organisation</span> <span class="nv">$organisationname</span> <span class="n">-organisationprefix</span> <span class="nv">$organisationprefix</span> <span class="n">-technicalcontactemail</span> <span class="nv">$technicalcontactemail</span> <span class="n">-technicalcontactphone</span> <span class="nv">$technicalcontactphone</span> 
+</code></pre></div></li>
+<li><strong>This step will enforce the DSC configuration</strong>. Run the following command within the PowerShell console:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">Start-DSCConfiguration</span> <span class="n">M365TenantConfig</span> <span class="n">-wait</span> <span class="n">-verbose</span> <span class="n">-force</span>
+</code></pre></div></li>
+<li>Validate the successful deployment by viewing changes in the appropriate Admin console (e.g Azure Active Directory or M365 compliance)</li>
+<li>In the PowerShell console, run the following command to ensure the configuration is no longer enforced via the Desired State Configuration Local Configuration Manager
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">Remove-DscConfigurationDocument</span> <span class="n">-stage</span> <span class="n">current</span>
+</code></pre></div></li>
+<li>Repeat the process for other DSC scripts, each can be ran without overlapping configuration</li>
+</ol>
+<h3 id="deployment-troubleshooting">Deployment troubleshooting</h3>
+<p>The following provides some common errors that might be encountered using the M365DSC and suggested remedy steps.</p>
+<p>Additional guidance and troubleshooting information can be found in the M365DSC <a href="https://github.com/Microsoft/Microsoft365DSC/wiki">wiki</a>.</p>
+<p><strong>Issue 1 - error:</strong> <em>Undefined DSC resource 'M365DSCResource'. Use Import-DSCResource to import the resource. Resource 'break.glass_priv1@domain does not exist or one of its  queried reference-property objects are not present.</em></p>
+<p><strong>Issue 1 - remedy:</strong> Ensure that  the emergency access admin account (break glass) identities exist prior to running the DSC script</p>
+<ul>
+<li>Check or create each emergency access admin account manually as per the the <a href="../../as-built-as-configured/platform/#emergency-access-admin-accounts">Platform - ABAC </a></li>
+</ul>
+<p><strong>Issue 2 - error:</strong> <em>Undefined DSC resource 'M365DSCResource'. Use Import-DSCResource to import the resource.</em></p>
+<p><strong>Issue 2 - remedy:</strong> Confirm the M365DSC module versioning installed on the system and load the desired module</p>
+<ul>
+<li>The module version defined in the DSC script does not match the version installed on the system. Either remove the <code>-version</code> parameter on the <code>Import-DscResource</code> command or change the version to match the version installed. </li>
+<li>If there are multiple versions of the M365DSC, import the required version
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">Get-Module</span> <span class="n">-Name</span> <span class="n">Microsoft365DSC</span> <span class="n">-ListAvailable</span> <span class="p">|</span><span class="nb">Select </span><span class="n">Version</span> <span class="c">#list available versions</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">Import-Module</span> <span class="n">-FullyQualifiedName</span> <span class="p">@{</span><span class="n">ModuleName</span> <span class="p">=</span> <span class="s2">&quot;Microsoft365DSC&quot;</span><span class="p">;</span> <span class="n">ModuleVersion</span> <span class="p">=</span> <span class="s2">&quot;version&quot;</span><span class="p">}</span> <span class="c">#import desired version</span>
+</code></pre></div></li>
+</ul>
+<p><strong>Issue 3 - error:</strong> <em>Running the Get-Command command in a remote session reported the following error: Processing data for a remote command failed with the following error message: The SSL connection cannot be established</em></p>
+<p><strong>Issue 3 - remedy:</strong> Ensure the local WinRM agent is configured and listening on HTTPS</p>
+<ul>
+<li>Confirm WinRM is setup for HTTPS. For further information, see <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/configure-winrm-for-https">How to configure WINRM for HTTPS - Microsoft Docs</a></li>
+<li>Confirm inbound Firewall port is open on 5586
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">$port</span><span class="p">=</span><span class="n">5986</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">netsh</span> <span class="n">advfirewall</span> <span class="n">firewall</span> <span class="n">add</span> <span class="n">rule</span> <span class="n">name</span><span class="p">=</span><span class="s2">&quot;Windows Remote Management (HTTPS-In)&quot;</span> <span class="n">dir</span><span class="p">=</span><span class="k">in</span> <span class="n">action</span><span class="p">=</span><span class="n">allow</span> <span class="n">protocol</span><span class="p">=</span><span class="n">TCP</span> <span class="n">localport</span><span class="p">=</span><span class="nv">$port</span>
+</code></pre></div></li>
+</ul>
+<p><strong>Issue 4 - error:</strong> <em>You cannot perform the requested operation, required scopes are missing in the token</em></p>
+<p><strong>Issue 4 - remedy:</strong> Ensure that the required API permissions for the Microsoft Graph for PowerShell are granted admin consent</p>
+<ul>
+<li>Connect with the Microsoft Graph API and grant admin consent when prompted
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">Connect-MgGraph</span> <span class="n">-TenantId</span> <span class="s2">&quot;Azure AD tenant id guid&quot;</span> <span class="n">-Scopes</span> <span class="s2">&quot;Application.Read.All,Group.Read.All,Directory.Read.All,Policy.Read.All,Policy.Read.ConditionalAccess,Policy.ReadWrite.ConditionalAccess,RoleManagement.Read.All,RoleManagement.Read.Directory,User.Read.All&quot;</span>
+</code></pre></div></li>
+</ul>
+<h2 id="microsoft-365-desired-state-configuration-auditing-procedure">Microsoft 365 Desired State Configuration auditing procedure</h2>
+<p>The following procedure is to <strong>audit</strong> a configuration using Microsoft 365 Desired State Configuration.</p>
+<h3 id="prerequisites_1">Prerequisites</h3>
+<ul>
+<li>An account with Global Administrator privileges</li>
+<li>A device with PowerShell Remoting enabled, internet access, and PowerShell 4.0 or greater installed</li>
+<li>An account with a PowerShell execution policy of unrestricted</li>
+</ul>
+<h3 id="procedure_1">Procedure</h3>
+<p>The process to audit a tenant based on the blueprints Microsoft 365 Desired State Configuration (M365DSC) is as follows:</p>
+<ol>
+<li>Download <a href="../../files/automation/baseline.txt">baseline.ps1</a></li>
+<li>Within <code>baseline.ps1</code>, update any organisation specific items (e.g. all areas where organisation name is specified)</li>
+<li>Open a PowerShell console as administrator and navigate to the directory containing the <code>baseline.ps1</code> file</li>
+<li>Run the following command in the PowerShell console:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">$outputlocation</span> <span class="p">=</span> <span class="s2">&quot;\Blueprint_Comparison </span><span class="p">$($(</span><span class="nb">Get-Date</span><span class="p">).</span><span class="n">ToString</span><span class="p">(`&quot;</span><span class="n">yyyy-MM-dd</span> <span class="n">hhmmss</span><span class="p">`&quot;))</span><span class="s2">.html&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">Assert-M365DSCBlueprint</span> <span class="n">-BluePrintUrl</span> <span class="p">.\</span><span class="n">baseline</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-OutputReportPath</span> <span class="nv">$outputlocation</span>
+</code></pre></div></li>
+<li>Review the html report to evaluate the configuration against the blueprint</li>
+</ol>
+<h3 id="blueprint-audit-baseline">Blueprint audit baseline</h3>
+<p>Blueprint audit baselines are available below:</p>
+<ul>
+<li><a href="../../files/automation/baseline.txt">baseline.ps1</a></li>
+</ul>
+<p>The above baseline requires updating to include organisation specific details prior to use.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
