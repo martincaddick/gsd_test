@@ -11,7 +11,7 @@ theme:
     repo: fontawesome/brands/git-alt
     admonition:
       <type>: octicons/alert-16 # material/alert
-  custom_dir: overrides
+  # custom_dir: overrides
 # Default values, taken from mkdocs_theme.yml
   features:
     # - content.code.annotate
