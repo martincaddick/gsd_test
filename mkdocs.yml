@@ -53,8 +53,8 @@ docs_dir: docs
 plugins:
   - search
   - simple
-  - mike:
-    canonical_version: latest
+  # - mike:
+  #   canonical_version: latest
   - git-revision-date-localized:
       fallback_to_build_date: true
       enable_creation_date: true
