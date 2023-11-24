@@ -155,9 +155,9 @@ markdown_extensions:
       toc_depth: 3
   - attr_list
   - meta
-  - md_in_html
-  - admonition
-  - footnotes
+  # - md_in_html
+  # - admonition
+  # - footnotes
 #   - pymdownx.critic
 #   - pymdownx.caret
 #   - pymdownx.keys
