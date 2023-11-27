@@ -79,20 +79,21 @@ markdown_extensions:
   - attr_list
   - meta
   - md_in_html
-  - admonition
-  - footnotes
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.details
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - mkdocs-click
+  # removed for testing
+  # - admonition
+  # - footnotes
+  # - pymdownx.critic
+  # - pymdownx.caret
+  # - pymdownx.keys
+  # - pymdownx.mark
+  # - pymdownx.tilde
+  # - pymdownx.details
+  # - pymdownx.highlight:
+  #     anchor_linenums: true
+  # - pymdownx.inlinehilite
+  # - pymdownx.snippets
+  # - pymdownx.superfences
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - mkdocs-click
