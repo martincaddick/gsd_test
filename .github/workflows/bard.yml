@@ -28,6 +28,7 @@ jobs:
         
         # Update engine branch
       - name: Update engine branch if changes detected
+      # set debug to true
         run: |
           ls -l site/*
           git checkout engine
