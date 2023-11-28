@@ -30,6 +30,7 @@ jobs:
       - name: Update dev branch if changes detected
         # if: steps.compare_changes.outputs.artifact.size > 0
         run: |
+          ls -l site/*
           git checkout dev
           git merge blueprint
           git add site/*
