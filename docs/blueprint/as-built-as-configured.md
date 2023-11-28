@@ -6,7 +6,7 @@
 
 ## All implementation types:
 
-- [Conditional access policies](../../as-built-as-configured/conditional-access-policies.md)
+- [Conditional access policies](../as-built-as-configured/conditional-access-policies.md)
 - [Office 365](../as-built-as-configured/office-365.md)
 - [Platform](../as-built-as-configured/platform.md)
 
