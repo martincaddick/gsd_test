@@ -1,7 +1,7 @@
 name: Auto Merge PR to Dev
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, closed]
     branches: [inreview]
 jobs:
   merge:
