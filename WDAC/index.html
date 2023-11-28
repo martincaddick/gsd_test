@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://martincaddick.github.io/WDAC/">
       
       
+        <link rel="prev" href="../ASD/">
       
-      <link rel="icon" href="/assets/favicon.png">
+      
+        <link rel="next" href="../Ninja/">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
     
     
       
-        <title>Get Security Done</title>
+        <title>10. Windows Defender App Control (WDAC) - Get Security Done</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -42,14 +48,25 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -70,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#10-wdac-windows-defender-application-control" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,7 +104,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Get Security Done" class="md-header__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+    <a href=".." title="Get Security Done" class="md-header__button md-logo" aria-label="Get Security Done" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -107,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              10. Windows Defender App Control (WDAC)
             
           </span>
         </div>
@@ -226,7 +248,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Get Security Done" class="md-nav__button md-logo" aria-label="Get Security Done" data-md-component="logo">
+    <a href=".." title="Get Security Done" class="md-nav__button md-logo" aria-label="Get Security Done" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -261,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -281,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Author/" class="md-nav__link">
+      <a href="../Author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/AssumedKnowledge/" class="md-nav__link">
+      <a href="../AssumedKnowledge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Identity/" class="md-nav__link">
+      <a href="../Identity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -341,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/GSD/" class="md-nav__link">
+      <a href="../GSD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -361,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MDI/" class="md-nav__link">
+      <a href="../MDI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -381,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CondAccess/" class="md-nav__link">
+      <a href="../CondAccess/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MDCA/" class="md-nav__link">
+      <a href="../MDCA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -421,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MDE/" class="md-nav__link">
+      <a href="../MDE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MDO/" class="md-nav__link">
+      <a href="../MDO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MDC/" class="md-nav__link">
+      <a href="../MDC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Sentinel/" class="md-nav__link">
+      <a href="../Sentinel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MIP/" class="md-nav__link">
+      <a href="../MIP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ASD/" class="md-nav__link">
+      <a href="../ASD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,10 +560,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/WDAC/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10. Windows Defender App Control (WDAC)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -550,6 +590,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-wdac-windows-defender-application-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.   WDAC: (Windows Defender Application Control)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. WDAC: (Windows Defender Application Control)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deeper-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deeper Background
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -561,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Ninja/" class="md-nav__link">
+      <a href="../Ninja/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Guides/" class="md-nav__link">
+      <a href="../Guides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/partner/" class="md-nav__link">
+      <a href="../partner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,8 +717,79 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  <h1>10. Windows Defender App Control (WDAC)</h1>
+
+<h2 id="10-wdac-windows-defender-application-control"><strong>10.   WDAC: (Windows Defender Application Control)</strong></h2>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Work in Progress,</strong> please review all content before starting, and be cautious in deployment
+Start in Test/UAT and avoid outliers like Developers
+Documentation on this page is <strong>very</strong> light at the moment and needs more review</p>
+</div>
+<p>Troubleshooting:
+-   <a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting</a></p>
+<p>From Eric Mannon: 
+-   <a href="https://www.linkedin.com/feed/update/urn:li:activity:6996238396973051904/">https://www.linkedin.com/feed/update/urn:li:activity:6996238396973051904/</a>
+-   <strong>Read the above article first</strong>
+-   1st- Install WDACme on all W10 workstations
+-   2nd- Enable "Smart Application Control" in Evaluation mode on W11 endpoints that support it
+-   3rd- Lock down Tier 0 (DC's, ADFS &amp; AD Connect servers) with WDAC Microsoft-only mode in block mode. (No 3rd party software should ever be installed on the Tier 0 server type)
+-   4th- Deploy a supplemental policy to block the Microsoft recommended block list
+-   🔑Golden rule: "Audit is better than nothing"
+-   🎯Desired state: "Zero Trust for unapproved code"</p>
+<p>🎒Resources:</p>
+<ul>
+<li>WDAC Deployment: <a href="https://lnkd.in/em8sV9AK">https://lnkd.in/em8sV9AK</a></li>
+<li>⛄️ Olaf Hartong's: WDACMe: <a href="https://lnkd.in/gU33rPzf">https://lnkd.in/gU33rPzf</a></li>
+<li>W11 Smart App Control: <a href="https://lnkd.in/e5X3WF9H">https://lnkd.in/e5X3WF9H</a></li>
+<li>Recommended Block Rules: <a href="https://lnkd.in/eZEwcwM9">https://lnkd.in/eZEwcwM9</a></li>
+<li>WDAC Policy Wizard: <a href="https://lnkd.in/gwFuvmd4">https://lnkd.in/gwFuvmd4</a></li>
+<li>Hunting WDAC Events in KQL: <a href="https://lnkd.in/eJE8WHZG">https://lnkd.in/eJE8WHZG</a></li>
+</ul>
+<h3 id="deeper-background"><strong>Deeper Background</strong></h3>
+<ul>
+<li>For those that want a deeper background on how this works, <strong>warning</strong> this is quite a big rabbit hole</li>
+<li><a href="https://medium.com/falconforce/sysmon-vs-microsoft-defender-for-endpoint-mde-internals-0x01-1e5663b10347">https://medium.com/falconforce/sysmon-vs-microsoft-defender-for-endpoint-mde-internals-0x01-1e5663b10347</a></li>
+<li><a href="https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x02-audit-settings-and-telemetry-1d0af3ebfb27">https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x02-audit-settings-and-telemetry-1d0af3ebfb27</a></li>
+<li><a href="https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x03-mde-telemetry-unreliability-and-log-augmentation-ec6e7e5f406f">https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x03-mde-telemetry-unreliability-and-log-augmentation-ec6e7e5f406f</a></li>
+<li><a href="https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x04-timeline-3f01282839e4">https://medium.com/falconforce/microsoft-defender-for-endpoint-internals-0x04-timeline-3f01282839e4</a></li>
+</ul>
+<h3 id="additional-resources"><strong>Additional Resources</strong></h3>
+<ul>
+<li>Creating a policy for machines already in use (this is the hard one)
+<a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/create-initial-default-policy#create-a-custom-base-policy-to-minimize-user-impact-on-in-use-client-devices">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/create-initial-default-policy#create-a-custom-base-policy-to-minimize-user-impact-on-in-use-client-devices</a></li>
+<li>WDAC Policy creation from DTA - <a href="https://desktop.gov.au/blueprint/abac/wdac-policy-creation.html">https://desktop.gov.au/blueprint/abac/wdac-policy-creation.html</a></li>
+<li><a href="https://www.cyber.gov.au/acsc/view-all-content/publications/implementing-application-control">https://www.cyber.gov.au/acsc/view-all-content/publications/implementing-application-control</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/create-wdac-deny-policy">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/create-wdac-deny-policy</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/deploying-windows-10-application-control-policy/ba-p/2486267">https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/deploying-windows-10-application-control-policy/ba-p/2486267</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide">https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide</a></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2023</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -736,11 +898,11 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../assets/javascripts/bundle.cd18aaf1.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
