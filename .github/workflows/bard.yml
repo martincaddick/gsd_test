@@ -26,16 +26,15 @@ jobs:
           name: generated-docs
           path: site
         
-        # Update Engine branch
-      - name: Update Engine branch if changes detected
-        # if: steps.compare_changes.outputs.artifact.size > 0
+        # Update engine branch
+      - name: Update engine branch if changes detected
         run: |
           ls -l site/*
-          git checkout Engine
+          git checkout engine
           git merge blueprint
           git add site/*
-          git commit -m "Update Engine documentation to include blueprint changes"
-          git push origin Engine
+          git commit -m "Update engine documentation to include blueprint changes"
+          git push origin engine
 
         #   Notify reviwer
       - name: Notify reviewer
