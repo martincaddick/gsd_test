@@ -1,0 +1,25 @@
+name: Print PR Title
+on:
+  pull_request:
+    types: [opened,synchroize]
+jobs:
+  print_title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print PR Title
+        run: |
+          echo "The title name of the PR is: ${{ github.event.pull_request.title }}"
+      
+  create_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create new branch
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git checkout -b ${{github.event.pull_request.title }}
+          git push origin ${{github.event.pull_request.title }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

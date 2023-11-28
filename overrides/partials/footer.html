@@ -1,0 +1,24 @@
+  <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="{{ config.site_url_oobe | url }}" title="{{ config.site_name_oobe | e }}" class="md-footer__button md-logo" aria-label="{{ config.site_name_oobe }}" data-md-component="logo">
+              <img src="{{ 'img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg' | url }}" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="{{config.site_url_pp | url }}" title="{{ config.site_url_pp | e }}" class="md-footer__button link" aria-label="{{ config.site_url_pp }}" data-md-component="pp">
+                {{ config.site_name_pp }}
+              </a>
+              <a href="{{config.site_url_oobe | url }}" title="{{ config.site_url_oobe | e }}" class="md-footer__button link" aria-label="{{ config.site_url_oobe }}" data-md-component="oobe">
+                {{ config.site_name_o }}
+              </a>
+              <a href="{{config.site_url_c | url }}" title="{{ config.site_url_c | e }}" class="md-footer__button link" aria-label="{{ config.site_url_c }}" data-md-component="contact">
+                {{ config.site_name_c }}
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

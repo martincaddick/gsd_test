@@ -1,0 +1,21 @@
+{% if page %} 
+    <button type="button" onclick="mobileToggle()" id="menuToggle" class="mobile-navbar-toggler">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+{% endif %}
+
+<div id="mobile-navbar-collapse" class="mobile-navbar-collapse-custom collapse">
+    <nav class="md-tabs-mobile" aria-label="{{ lang.t('tabs') }}" data-md-component="tabs">
+      <div class="md-grid">
+        <ul class="md-tabs__list">
+          {% for nav_item in nav %} 
+            {% include "partials/tabs-item.html" %} 
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+</div>
+
+   
