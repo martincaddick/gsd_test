@@ -50,16 +50,16 @@ theme:
 #     logo: logo
 docs_dir: docs
 # Plugins
-plugins:
-  - search
-  # - simple
-  # - mike:
-  #   canonical_version: latest
-  - git-revision-date-localized:
-      fallback_to_build_date: true
-      enable_creation_date: true
-      timezone: Australia/Sydney
-  # - glightbox:
+# plugins:
+#   - search
+#   # - simple
+#   # - mike:
+#   #   canonical_version: latest
+#   - git-revision-date-localized:
+#       fallback_to_build_date: true
+#       enable_creation_date: true
+#       timezone: Australia/Sydney
+#   # - glightbox:
   #     auto_caption: true
   #- social
   #- awesome-list
