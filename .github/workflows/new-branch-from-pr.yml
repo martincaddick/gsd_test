@@ -1,0 +1,21 @@
+name: Create branch from pull request title
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get pull request title
+        id: get-pull-request-title
+        run: |
+          echo "Pull request title: ${{ github.event.pull_request.title }}"
+
+      - name: Create branch from pull request title
+        run: |
+          git checkout -b ${{ github.event.pull_request.title }}

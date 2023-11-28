@@ -1,0 +1,20 @@
+  {% set class = "md-header" %}
+  {% if "navigation.tabs.sticky" in features %}
+    {% set class = class ~ " md-header--lifted" %}
+  {% endif %}
+  <header class="{{ class }}" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+      <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+        <img src="{{ 'img/The-blueprint-site-title-White.svg' | url }}" alt="blueprint">  
+      </a>
+    </nav>
+    <div class="mobile-tabs"> 
+      {% include "partials/mobile-nav.html" %}
+    </div>
+    {% if "navigation.tabs.sticky" in features %}
+      {% if "navigation.tabs" in features %}
+        {% include "partials/tabs.html" %}
+      {% endif %}
+    {% endif %}
+  </header>
+  <div id="mobile-container-collapse"></div>
