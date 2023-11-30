@@ -1,0 +1,43 @@
+Workflow Stages:
+
+Pull Request Review:
+
+Trigger: Pull request opened or updated
+Jobs:
+Reviewer:
+    Steps:
+    Check out code
+    Run reviewer script (e.g., check for style guidelines, completeness)
+    Set output indicating review status (approved, rejected, changes required)
+    Upload review status output artifact
+    Documentation Generation and Tagging:
+
+====
+
+Trigger: Workflow dispatch (manually triggered)
+Prerequisites: All pull requests merged for the month
+Jobs:
+Generate Docs:
+
+    Steps:
+    Check out code
+    Install mkdocs and material theme
+    Generate HTML documentation from Markdown files
+    Upload generated HTML files as artifacts
+    Create Release Tag:
+
+    Steps:
+    Download generated HTML artifacts
+    Create a new release
+    Tag the release with the current date in YYYY-MM format
+    Upload release assets (HTML files)
+    Deploy to GitHub Pages:
+
+Trigger: Release created
+Jobs:
+Deploy Docs:
+    Steps:
+    Check out code
+    Download release assets (HTML files)
+    Deploy HTML files to GitHub Pages branch (e.g., gh-pages)
+    Update version history on the website (optional)

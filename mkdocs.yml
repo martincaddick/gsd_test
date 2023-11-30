@@ -50,7 +50,7 @@ theme:
 #     logo: logo
 docs_dir: docs
 # Plugins
-# plugins:
+plugins:
 #   - search
 #   # - simple
 #   # - mike:
@@ -65,7 +65,7 @@ docs_dir: docs
   #- awesome-list
   #- table-reader - DON'T use, relys on pandas, too heavy for this
   #- img2fig - Not needed
-  # - mermaid2
+  - mermaid2
   #- macros
   #- minify 
 
