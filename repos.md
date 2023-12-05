@@ -61,3 +61,31 @@ graph TB
     M -->|Success| N[Job Complete]
 
 ```
+```mermaid
+graph TB
+    A[ci] --> B[on]
+    B --> C[push]
+    C --> D[branches: develop]
+    B --> E[workflow_dispatch]
+    A --> F[permissions]
+    F --> G[contents: write]
+    A --> H[jobs]
+    H --> I[deploy]
+    I --> J[runs-on: ubuntu-latest]
+    J --> K[steps]
+    K --> L[Checkout the code]
+    L --> M[Python setup]
+    M --> N[Cache]
+    N --> O[Install mkdocs-material and deploy documentation]
+    O --> P[Get the gh-pages branch]
+    P --> Q[Deploy the website]
+    H --> R[convert_via_pandoc]
+    R --> S[runs-on: ubuntu-latest]
+    S --> T[container]
+    T --> U[steps]
+    U --> V[Checkout the code]
+    V --> W[Prepare output folder]
+    W --> X[Prepare output directories]
+    X --> Y[Convert md to docx]
+    Y --> Z[Upload artifact]
+```
