@@ -31,8 +31,8 @@ theme:
     - search.suggest
     - toc.integrate
   palette:
-    - scheme: default
-      primary: custom
+    - scheme: oobeprimary
+      primary: oobeprimary
       accent: green
       toggle:
         icon: material/toggle-switch-off-outline
@@ -51,6 +51,7 @@ theme:
 #     logo: logo
 extra_css:
   - css/extra.css
+  
   
 docs_dir: docs
 # Plugins
