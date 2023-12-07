@@ -1,9 +1,9 @@
----
+<!-- ---
 title: Home
 hide:
  - navigation
  - toc
----
+--- -->
 
 # Welcome
 
@@ -16,3 +16,5 @@ We've taken the great work started by the Digital Transformation Agency, and us,
 Have a look around, and if you have a suggestion, feel free to drop us a line in [GitHub](https://github.com/oobecomau/theblueprint).
 
 Check out some of our products below that we use ourselves to assist with Microsoft 365 deployments, and if you need a hand with implementing the blueprint, get in touch.
+
+[![Powered by oobe](img/oobe-a-Fujitsu-company-Primary-Logo-White-RGB.svg)](https://www.oobe.com.au)

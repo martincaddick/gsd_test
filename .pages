@@ -1,5 +1,5 @@
 nav:
-    - Readme: readme.md
+    - Home: index.md
     - ABACs: as-built-as-configured
     - Blueprint: blueprint
     - News: news
