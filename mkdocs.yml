@@ -49,6 +49,9 @@ theme:
   # favicon: assets/favicon.png
 #   icon:
 #     logo: logo
+extra_css:
+  - css/extra.css
+  
 docs_dir: docs
 # Plugins
 plugins:

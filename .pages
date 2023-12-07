@@ -1,6 +1,6 @@
 nav:
-    - Home: index.md
-    - ABACs: as-built-as-configured
+    - Welcome: index.md
+    # - ABACs: as-built-as-configured
     - Blueprint: blueprint
     - News: news
     - Patterns: patterns
