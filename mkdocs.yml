@@ -31,18 +31,20 @@ theme:
     - search.suggest
     - toc.integrate
   palette:
-    - scheme: oobeprimary
-      primary: oobeprimary
-      # accent: green
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: cyan
-      accent: cyan
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    primary: oobeprimary
+    accent: oobeprimary
+    # - scheme: oobeprimary
+    #   primary: oobeprimary
+    #   accent: oobeprimary
+    #   toggle:
+    #     icon: material/toggle-switch-off-outline
+    #     name: Switch to dark mode
+    # - scheme: slate
+    #   primary: cyan
+    #   accent: cyan
+    #   toggle:
+    #     icon: material/toggle-switch
+    #     name: Switch to light mode
   # font:
   #  text: Roboto
   #  code: Roboto Mono
