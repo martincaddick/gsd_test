@@ -1328,16 +1328,14 @@
 <li>System Reserved (Primary) 350 MB fixed size. NTFS file system</li>
 <li>Windows (Primary) 99% of remaining space on disk. NTFS file system</li>
 <li>Recovery (Recovery) 100% of remaining space on disk. NTFS file system.</li>
-<li>Options/Scripts: Task Sequence Variable</li>
+<li>Options/Scripts: Task Sequence Variable
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>_SMSTSClientCache not exists
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>_SMSTSMediaType not equals “OEMMedia”
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>_OSDMigrateUseHardlinks not equals “true”
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>_SMSTSBootUEFI not equals “true”
+</code></pre></div></li>
 </ul>
 </li>
-</ul>
-<pre><code>_SMSTSClientCache not exists
-_SMSTSMediaType not equals “OEMMedia”
-_OSDMigrateUseHardlinks not equals “true”
-_SMSTSBootUEFI not equals “true”
-</code></pre>
-<ul>
 <li>Item: Partition Disk 0 – UEFI<ul>
 <li>Type: Format and Partition Disk</li>
 <li>Configuration</li>
@@ -1466,45 +1464,45 @@ _SMSTSBootUEFI not equals “true”
 <p>The following figure shows the OOBE Agency specific welcome page.</p>
 <p><img alt="Figure 2 Windows 10 OOBE Welcome Screen" src="../../img/abac/windows-10-welcome.png#center" /></p>
 <h3 id="annex-1-unattendxml">Annex 1: Unattend.xml</h3>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;unattend xmlns=&quot;urn:schemas-microsoft-com:unattend&quot;&gt;
-     &lt;settings pass=&quot;oobeSystem&quot;&gt;
-          &lt;component name=&quot;Microsoft-Windows-International-Core&quot; processorArchitecture=&quot;amd64&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; language=&quot;neutral&quot; versionScope=&quot;nonSxS&quot; xmlns:wcm=&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
-               &lt;InputLocale&gt;0c09:00000409&lt;/InputLocale&gt;
-               &lt;SystemLocale&gt;en-AU&lt;/SystemLocale&gt;
-               &lt;UILanguage&gt;en-AU&lt;/UILanguage&gt;
-               &lt;UserLocale&gt;en-AU&lt;/UserLocale&gt;
-               &lt;UILanguageFallback&gt;en-US&lt;/UILanguageFallback&gt;
-          &lt;/component&gt;
-          &lt;component name=&quot;Microsoft-Windows-Shell-Setup&quot; processorArchitecture=&quot;amd64&quot; publicKeyToken=&quot;31bf3856ad364e35&quot; language=&quot;neutral&quot; versionScope=&quot;nonSxS&quot; xmlns:wcm=&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;&gt;
-               &lt;OOBE&gt;
-                    &lt;HideWirelessSetupInOOBE&gt;true&lt;/HideWirelessSetupInOOBE&gt;
-                    &lt;NetworkLocation&gt;Work&lt;/NetworkLocation&gt;
-                    &lt;SkipMachineOOBE&gt;true&lt;/SkipMachineOOBE&gt;
-                    &lt;SkipUserOOBE&gt;true&lt;/SkipUserOOBE&gt;
-               &lt;/OOBE&gt;
-          &lt;/component&gt;
-     &lt;/settings&gt;
-&lt;/unattend&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&lt;unattend</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;urn:schemas-microsoft-com:unattend&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">     </span><span class="nt">&lt;settings</span><span class="w"> </span><span class="na">pass=</span><span class="s">&quot;oobeSystem&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">          </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Microsoft-Windows-International-Core&quot;</span><span class="w"> </span><span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span><span class="w"> </span><span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;neutral&quot;</span><span class="w"> </span><span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="w"> </span><span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">               </span><span class="nt">&lt;InputLocale&gt;</span>0c09:00000409<span class="nt">&lt;/InputLocale&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">               </span><span class="nt">&lt;SystemLocale&gt;</span>en-AU<span class="nt">&lt;/SystemLocale&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">               </span><span class="nt">&lt;UILanguage&gt;</span>en-AU<span class="nt">&lt;/UILanguage&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">               </span><span class="nt">&lt;UserLocale&gt;</span>en-AU<span class="nt">&lt;/UserLocale&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">               </span><span class="nt">&lt;UILanguageFallback&gt;</span>en-US<span class="nt">&lt;/UILanguageFallback&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="nt">&lt;/component&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">          </span><span class="nt">&lt;component</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Microsoft-Windows-Shell-Setup&quot;</span><span class="w"> </span><span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span><span class="w"> </span><span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span><span class="w"> </span><span class="na">language=</span><span class="s">&quot;neutral&quot;</span><span class="w"> </span><span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="w"> </span><span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">               </span><span class="nt">&lt;OOBE&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                    </span><span class="nt">&lt;HideWirelessSetupInOOBE&gt;</span>true<span class="nt">&lt;/HideWirelessSetupInOOBE&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                    </span><span class="nt">&lt;NetworkLocation&gt;</span>Work<span class="nt">&lt;/NetworkLocation&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                    </span><span class="nt">&lt;SkipMachineOOBE&gt;</span>true<span class="nt">&lt;/SkipMachineOOBE&gt;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                    </span><span class="nt">&lt;SkipUserOOBE&gt;</span>true<span class="nt">&lt;/SkipUserOOBE&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">               </span><span class="nt">&lt;/OOBE&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">          </span><span class="nt">&lt;/component&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">     </span><span class="nt">&lt;/settings&gt;</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nt">&lt;/unattend&gt;</span>
+</code></pre></div>
 <h3 id="annex-2-autopilotconfigurationfilejson">Annex 2: AutopilotConfigurationFile.json</h3>
 <p>This is an example AutopilotConfigurationFile.json only. This file will be agency specific and should be generated from the Intune tenant. Ensure that the <code>TenantId</code> and <code>ZtdCorrelationID</code> are correct before using.</p>
-<pre><code class="language-json">{
-  &quot;CloudAssignedDomainJoinMethod&quot;: 0,
-  &quot;CloudAssignedDeviceName&quot;: &quot;TEST%RAND: 2%&quot;,
-  &quot;CloudAssignedAutopilotUpdateTimeout&quot;: 1800000,
-  &quot;CloudAssignedForcedEnrollment&quot;: 1,
-  &quot;Version&quot;: 2049,
-  &quot;CloudAssignedTenantId&quot;: &quot;xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,
-  &quot;CloudAssignedAutopilotUpdateDisabled&quot;: 1,
-  &quot;ZtdCorrelationId&quot;: &quot;xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,
-  &quot;Comment_File&quot;: &quot;Profile Autopilot&quot;,
-  &quot;CloudAssignedAadServerData&quot;: &quot;{\&quot;ZeroTouchConfig\&quot;:{\&quot;CloudAssignedTenantUpn\&quot;:\&quot;\&quot;,\&quot;ForcedEnrollment\&quot;:1,\&quot;CloudAssignedTenantDomain\&quot;:\&quot;testagency.gov.au\&quot;}}&quot;,
-  &quot;CloudAssignedOobeConfig&quot;: 1310,
-  &quot;CloudAssignedTenantDomain&quot;: &quot;testagency.gov.au&quot;,
-  &quot;CloudAssignedLanguage&quot;: &quot;os-default&quot;
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedDomainJoinMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedDeviceName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TEST%RAND: 2%&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedAutopilotUpdateTimeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1800000</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedForcedEnrollment&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2049</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedTenantId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedAutopilotUpdateDisabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">&quot;ZtdCorrelationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">&quot;Comment_File&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Profile Autopilot&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedAadServerData&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{\&quot;ZeroTouchConfig\&quot;:{\&quot;CloudAssignedTenantUpn\&quot;:\&quot;\&quot;,\&quot;ForcedEnrollment\&quot;:1,\&quot;CloudAssignedTenantDomain\&quot;:\&quot;testagency.gov.au\&quot;}}&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedOobeConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1310</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedTenantDomain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testagency.gov.au&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="nt">&quot;CloudAssignedLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;os-default&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
@@ -1546,6 +1544,11 @@ _SMSTSBootUEFI not equals “true”
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       

@@ -1272,44 +1272,36 @@
 <li>Deploy the image to a standard organisational Windows 10 device.</li>
 <li>Ensure all standard software is installed (e.g. Microsoft Office).</li>
 <li>Verify all drivers are signed (This can be completed utilising sigverif)</li>
-<li>Using an administrative PowerShell session run</li>
-</ol>
-<pre><code class="language-powershell">$PolicyPath=$env:userprofile+&quot;\Desktop\&quot;
-$PolicyName=&quot;GoldImagePolicy&quot;
-$WDACPolicy=$PolicyPath+$PolicyName+&quot;.xml&quot;
-New-CIPolicy -Level Publisher -FilePath $WDACPolicy -UserPEs 3&gt; CIPolicyLog.txt -Fallback hash
-</code></pre>
-<ol>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$PolicyPath</span><span class="p">=</span><span class="nv">$env:userprofile</span><span class="p">+</span><span class="s2">&quot;\Desktop\&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">$PolicyName</span><span class="p">=</span><span class="s2">&quot;GoldImagePolicy&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">$WDACPolicy</span><span class="p">=</span><span class="nv">$PolicyPath</span><span class="p">+</span><span class="nv">$PolicyName</span><span class="p">+</span><span class="s2">&quot;.xml&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">New-CIPolicy</span> <span class="n">-Level</span> <span class="n">Publisher</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-UserPEs</span> <span class="n">3</span><span class="p">&gt;</span> <span class="n">CIPolicyLog</span><span class="p">.</span><span class="n">txt</span> <span class="n">-Fallback</span> <span class="n">hash</span>
+</code></pre></div></li>
 <li>Review the CIPolicy.txt file for any items which could not be whitelisted.</li>
-<li>Using an administrative PowerShell session run</li>
-</ol>
-<pre><code class="language-powershell">Set-RuleOption -FilePath $WDACPolicy -Option 0 # Enabled UMCI
-Set-RuleOption -FilePath $WDACPolicy -Option 1 # Enable Boot Menu Protection
-Set-RuleOption -FilePath $WDACPolicy -Option 2 # Require WHQL
-Set-RuleOption -FilePath $WDACPolicy -Option 3 # Enable Audit Mode
-Set-RuleOption -FilePath $WDACPolicy -Option 4 # Disable Flight Signing
-Set-RuleOption -FilePath $WDACPolicy -Option 6 # Enable Unsigned Policy
-Set-RuleOption -FilePath $WDACPolicy -Option 8 # Require EV Signers
-Set-RuleOption -FilePath $WDACPolicy -Option 10 # Enable Boot Audit on Failure
-Set-RuleOption -FilePath $WDACPolicy -Option 12 # Enable Enforce Store Apps
-Set-RuleOption -FilePath $WDACPolicy -Option 13 # Enable Managed Installer
-Set-RuleOption -FilePath $WDACPolicy -Option 16 # Enable No Reboot
-Set-RuleOption -FilePath $WDACPolicy -Option 17 # Enable Allow Supplemental
-Set-RuleOption -FilePath $WDACPolicy -Option 19 # Enable Dynamic Code Security
-</code></pre>
-<ol>
-<li>Deploy the file locally in audit mode and validate no additional files require whitelisting</li>
-</ol>
-<pre><code class="language-powershell">$WDACPolicyCIP=$PolicyPath+&quot;{&lt;Policy GUID&gt;}.cip&quot;
-ConvertFrom-CIPolicy $WDACPolicy $WDACPolicyCIP
-Copy-Item $WDACPolicyCIP &quot;&lt;OS Volume&gt;\Windows\System32\CodeIntegrity\CIPolicies\Active\{&lt;Policy GUID&gt;}.cip&quot;
-</code></pre>
-<ol>
-<li>Using an administrative PowerShell session run the following to switch the policy into enforce mode</li>
-</ol>
-<pre><code class="language-powershell">Set-RuleOption -FilePath $WDACPolicy -Option 3 -Delete
-</code></pre>
-<ol>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">0</span> <span class="c"># Enabled UMCI</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">1</span> <span class="c"># Enable Boot Menu Protection</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">2</span> <span class="c"># Require WHQL</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">3</span> <span class="c"># Enable Audit Mode</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">4</span> <span class="c"># Disable Flight Signing</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">6</span> <span class="c"># Enable Unsigned Policy</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">8</span> <span class="c"># Require EV Signers</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">10</span> <span class="c"># Enable Boot Audit on Failure</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">12</span> <span class="c"># Enable Enforce Store Apps</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">13</span> <span class="c"># Enable Managed Installer</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">16</span> <span class="c"># Enable No Reboot</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">17</span> <span class="c"># Enable Allow Supplemental</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">19</span> <span class="c"># Enable Dynamic Code Security</span>
+</code></pre></div></li>
+<li>Deploy the file locally in audit mode and validate no additional files require whitelisting
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$WDACPolicyCIP</span><span class="p">=</span><span class="nv">$PolicyPath</span><span class="p">+</span><span class="s2">&quot;{&lt;Policy GUID&gt;}.cip&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">ConvertFrom-CIPolicy</span> <span class="nv">$WDACPolicy</span> <span class="nv">$WDACPolicyCIP</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">Copy-Item</span> <span class="nv">$WDACPolicyCIP</span> <span class="s2">&quot;&lt;OS Volume&gt;\Windows\System32\CodeIntegrity\CIPolicies\Active\{&lt;Policy GUID&gt;}.cip&quot;</span>
+</code></pre></div></li>
+<li>Using an administrative PowerShell session run the following to switch the policy into enforce mode
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">3</span> <span class="n">-Delete</span>
+</code></pre></div></li>
 <li>Deploy the file locally in enforce mode and validate no additional files require whitelisting</li>
 <li><a href="#wdac-policy---deployment">Deploy the file globally</a> </li>
 </ol>
@@ -1320,30 +1312,26 @@ Copy-Item $WDACPolicyCIP &quot;&lt;OS Volume&gt;\Windows\System32\CodeIntegrity\
 <li>Make a copy of the policy and place it into a working directory (i.e. My documents)</li>
 <li>Open the policy in a XML editor such as Visual Studio code or notepad.</li>
 <li>Remove all flighting related signers (note they will also need to be removed from the signing scenarios)</li>
-<li>Using an administrative PowerShell session run</li>
-</ol>
-<pre><code class="language-powershell">$WDACPolicy = {path to policy file}
-Set-RuleOption -FilePath $WDACPolicy -Option 0 # Enabled UMCI
-Set-RuleOption -FilePath $WDACPolicy -Option 1 # Enable Boot Menu Protection
-Set-RuleOption -FilePath $WDACPolicy -Option 2 # Require WHQL
-Set-RuleOption -FilePath $WDACPolicy -Option 3 # Enable Audit Mode
-Set-RuleOption -FilePath $WDACPolicy -Option 4 # Disable Flight Signing
-Set-RuleOption -FilePath $WDACPolicy -Option 6 # Enable Unsigned Policy
-Set-RuleOption -FilePath $WDACPolicy -Option 8 # Require EV Signers
-Set-RuleOption -FilePath $WDACPolicy -Option 10 # Enable Boot Audit on Failure
-Set-RuleOption -FilePath $WDACPolicy -Option 12 # Enable Enforce Store Apps
-Set-RuleOption -FilePath $WDACPolicy -Option 13 # Enable Managed Installer
-Set-RuleOption -FilePath $WDACPolicy -Option 16 # Enable No Reboot
-Set-RuleOption -FilePath $WDACPolicy -Option 17 # Enable Allow Supplemental
-Set-RuleOption -FilePath $WDACPolicy -Option 19 # Enable Dynamic Code Security
-</code></pre>
-<ol>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">$WDACPolicy</span> <span class="p">=</span> <span class="p">{</span><span class="n">path</span> <span class="n">to</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">0</span> <span class="c"># Enabled UMCI</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">1</span> <span class="c"># Enable Boot Menu Protection</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">2</span> <span class="c"># Require WHQL</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">3</span> <span class="c"># Enable Audit Mode</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">4</span> <span class="c"># Disable Flight Signing</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">6</span> <span class="c"># Enable Unsigned Policy</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">8</span> <span class="c"># Require EV Signers</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">10</span> <span class="c"># Enable Boot Audit on Failure</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">12</span> <span class="c"># Enable Enforce Store Apps</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">13</span> <span class="c"># Enable Managed Installer</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">16</span> <span class="c"># Enable No Reboot</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">17</span> <span class="c"># Enable Allow Supplemental</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">19</span> <span class="c"># Enable Dynamic Code Security</span>
+</code></pre></div></li>
 <li>Deploy the file locally in audit mode and validate no additional files require whitelisting</li>
-<li>Using an administrative PowerShell session run the following to switch the policy into enforce mode</li>
-</ol>
-<pre><code class="language-powershell">Set-RuleOption -FilePath $WDACPolicy -Option 3 -Delete
-</code></pre>
-<ol>
+<li>Using an administrative PowerShell session run the following to switch the policy into enforce mode
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Set-RuleOption</span> <span class="n">-FilePath</span> <span class="nv">$WDACPolicy</span> <span class="n">-Option</span> <span class="n">3</span> <span class="n">-Delete</span>
+</code></pre></div></li>
 <li>Deploy the file locally in enforce mode and validate no additional files require whitelisting</li>
 <li><a href="#wdac-policy---deployment">Deploy the file globally</a> </li>
 </ol>
@@ -1357,62 +1345,58 @@ Set-RuleOption -FilePath $WDACPolicy -Option 19 # Enable Dynamic Code Security
 <p>Post identification of the appropriate whitelisting method, the following procedure is used to whitelist the application:</p>
 <ol>
 <li>Within an administrative PowerShell session navigate to the install directory of the application</li>
-<li>Run the following command</li>
-</ol>
-<pre><code class="language-powershell">$whitelistlevel = {the chosen method of whitelist e.g. hash}
-$Outputlocation = {the path to output the policy file}
-$fallbacklevel = {the backup method of whitelist e.g. publisher}
-$directory = {the path to be scanned}
-New-CIPolicy -Level $whitelistlevel -FilePath $Outputlocation -Fallback $fallbacklevel  -ScanPath $directory -UserPEs
-</code></pre>
-<ol>
+<li>Run the following command
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">$whitelistlevel</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">chosen</span> <span class="n">method</span> <span class="n">of</span> <span class="n">whitelist</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">hash</span><span class="p">}</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">$Outputlocation</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">output</span> <span class="n">the</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">$fallbacklevel</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">backup</span> <span class="n">method</span> <span class="n">of</span> <span class="n">whitelist</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">publisher</span><span class="p">}</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nv">$directory</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">be</span> <span class="n">scanned</span><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nb">New-CIPolicy</span> <span class="n">-Level</span> <span class="nv">$whitelistlevel</span> <span class="n">-FilePath</span> <span class="nv">$Outputlocation</span> <span class="n">-Fallback</span> <span class="nv">$fallbacklevel</span>  <span class="n">-ScanPath</span> <span class="nv">$directory</span> <span class="n">-UserPEs</span>
+</code></pre></div></li>
 <li>Convert the new base policy to a supplementary policy.</li>
 </ol>
 <h4 id="whitelisting-errors-in-the-event-log">Whitelisting errors in the event log</h4>
 <p>Applications which are not whitelisted will be logged in the code integrity event log on execution. These applications can be whitelisted using the following procedure:</p>
 <ol>
-<li>Within an administrative PowerShell session run the following command</li>
-</ol>
-<pre><code class="language-powershell">$whitelistlevel = {the chosen method of whitelist e.g. hash}
-$Outputlocation = {the path to output the policy file}
-$fallbacklevel = {the backup method of whitelist e.g. publisher}
-New-CIPolicy -Level $whitelistlevel -FilePath $Outputlocation -Fallback $fallbacklevel  -audit -UserPEs
-</code></pre>
-<ol>
+<li>Within an administrative PowerShell session run the following command
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">$whitelistlevel</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">chosen</span> <span class="n">method</span> <span class="n">of</span> <span class="n">whitelist</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">hash</span><span class="p">}</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">$Outputlocation</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">path</span> <span class="n">to</span> <span class="n">output</span> <span class="n">the</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nv">$fallbacklevel</span> <span class="p">=</span> <span class="p">{</span><span class="n">the</span> <span class="n">backup</span> <span class="n">method</span> <span class="n">of</span> <span class="n">whitelist</span> <span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span> <span class="n">publisher</span><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">New-CIPolicy</span> <span class="n">-Level</span> <span class="nv">$whitelistlevel</span> <span class="n">-FilePath</span> <span class="nv">$Outputlocation</span> <span class="n">-Fallback</span> <span class="nv">$fallbacklevel</span>  <span class="n">-audit</span> <span class="n">-UserPEs</span>
+</code></pre></div></li>
 <li>Convert the new base policy to a supplementary policy.</li>
 </ol>
 <h4 id="linking-to-the-base-policy">Linking to the base policy</h4>
 <p>To convert a base policy to a supplementary policy of another base policy they must be linked. Upon linking the policyID of the supplementary policy will be set to a new GUID. This new guid is required when deploying the supplementary policy via Microsoft Endpoint Manager. </p>
 <p>The procedure to link the policies is as follows:</p>
 <ul>
-<li>Using an administrative PowerShell session run</li>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">$SupWDACPolicy</span> <span class="p">=</span> <span class="p">{</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">supplementary</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">$SupWDACPolicyName</span> <span class="p">=</span> <span class="p">{</span><span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">supplementary</span> <span class="n">policy</span><span class="p">}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nv">$WDACPolicy</span> <span class="p">=</span> <span class="p">{</span><span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nv">$WDACPolicyID</span> <span class="p">=</span> <span class="p">{</span><span class="n">base</span> <span class="n">policy</span> <span class="n">id</span> <span class="n">available</span> <span class="n">within</span> <span class="n">the</span> <span class="n">base</span> <span class="n">policy</span> <span class="n">PolicyID</span> <span class="n">tags</span><span class="p">}</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">Set-CIPolicyIdInfo</span> <span class="n">-FilePath</span> <span class="nv">$SupWDACPolicy</span> <span class="n">-PolicyName</span> <span class="nv">$SupWDACPolicyName</span> <span class="n">-SupplementsBasePolicyID</span> <span class="nv">$WDACPolicyID</span> <span class="n">-BasePolicyToSupplementPath</span> <span class="nv">$WDACPolicy</span>
+</code></pre></div></li>
 </ul>
-<pre><code class="language-powershell">$SupWDACPolicy = {path to the supplementary policy file}
-$SupWDACPolicyName = {Name of the supplementary policy}
-$WDACPolicy = {path to the policy file}
-$WDACPolicyID = {base policy id available within the base policy PolicyID tags}
-Set-CIPolicyIdInfo -FilePath $SupWDACPolicy -PolicyName $SupWDACPolicyName -SupplementsBasePolicyID $WDACPolicyID -BasePolicyToSupplementPath $WDACPolicy
-</code></pre>
 <h4 id="merging-with-the-base-policy">Merging with the base policy</h4>
 <p>To merge base policies together the following procedure is used:</p>
 <ul>
-<li>Using an administrative PowerShell session run</li>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">$InitialCIPolicy</span><span class="p">=</span> <span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">first</span> <span class="n">base</span> <span class="n">policy</span><span class="p">}</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">$AuditCIPolicy</span><span class="p">=</span> <span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">new</span> <span class="n">base</span> <span class="n">policy</span><span class="p">}</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nv">$MergedCIPolicy</span><span class="p">=</span> <span class="p">{</span><span class="n">location</span> <span class="n">to</span> <span class="n">output</span> <span class="n">the</span> <span class="n">policy</span><span class="p">}</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nb">Merge-CIPolicy</span> <span class="n">-PolicyPaths</span> <span class="nv">$InitialCIPolicy</span><span class="p">,</span><span class="nv">$AuditCIPolicy</span> <span class="n">-OutputFilePath</span> <span class="nv">$MergedCIPolicy</span>
+</code></pre></div></li>
 </ul>
-<pre><code class="language-powershell">$InitialCIPolicy= {Path to the first base policy}
-$AuditCIPolicy= {Path to the new base policy}
-$MergedCIPolicy= {location to output the policy}
-Merge-CIPolicy -PolicyPaths $InitialCIPolicy,$AuditCIPolicy -OutputFilePath $MergedCIPolicy
-</code></pre>
 <h3 id="wdac-policy-policy-signing">WDAC policy - policy signing</h3>
 <p>Prior to deployment of the WDAC policy it can be signed using an internal Certificate Authority code signing certificate or a purchased code signing certificate.</p>
 <p>The procedure to sign the policy is as follows:</p>
 <ul>
-<li>Using an administrative PowerShell session run</li>
+<li>Using an administrative PowerShell session run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">Add-SignerRule</span> <span class="n">-FilePath</span> <span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">XML</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span> <span class="n">-CertificatePath</span> <span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">exported</span> <span class="p">.</span><span class="n">cer</span> <span class="n">certificate</span><span class="p">}</span> <span class="n">-Kernel</span> <span class="n">-User</span> <span class="n">-Update</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">ConvertFrom-CIPolicy</span> <span class="n">-XmlFilePath</span> <span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">XML</span> <span class="n">policy</span> <span class="n">file</span><span class="p">}</span> <span class="n">-BinaryFilePath</span> <span class="p">`</span><span class="n">Binary</span> <span class="n">output</span> <span class="n">location</span><span class="p">`</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">{</span><span class="n">Path</span> <span class="n">to</span> <span class="n">signtool</span><span class="p">.</span><span class="n">exe</span><span class="p">}</span> <span class="n">sign</span> <span class="n">-v</span> <span class="p">/</span><span class="n">n</span> <span class="p">{</span><span class="n">Certificate</span> <span class="n">Subject</span> <span class="n">name</span><span class="p">}</span> <span class="n">-p7</span> <span class="p">.</span> <span class="n">-p7co</span> <span class="n">1</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">6</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">4</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">311</span><span class="p">.</span><span class="n">79</span><span class="p">.</span><span class="n">1</span> <span class="n">-fd</span> <span class="n">sha256</span> <span class="p">{</span><span class="n">Binary</span> <span class="n">policy</span> <span class="n">location</span><span class="p">}</span>
+</code></pre></div></li>
 </ul>
-<pre><code class="language-powershell">Add-SignerRule -FilePath {Path to the XML policy file} -CertificatePath {Path to exported .cer certificate} -Kernel -User -Update
-ConvertFrom-CIPolicy -XmlFilePath {Path to the XML policy file} -BinaryFilePath `Binary output location`
-{Path to signtool.exe} sign -v /n {Certificate Subject name} -p7 . -p7co 1.3.6.1.4.1.311.79.1 -fd sha256 {Binary policy location}
-</code></pre>
 <h3 id="wdac-policy-deployment">WDAC policy - deployment</h3>
 <p>The above policies are deployed through Microsoft Endpoint Manager - Intune (Intune). The deployment configuration is available within the <a href="../intune-configuration/#agency-wdacbasepolicy">Intune Configuration</a> section.</p>
 <h3 id="wdac-policy-removal">WDAC policy - removal</h3>
@@ -1479,6 +1463,11 @@ ConvertFrom-CIPolicy -XmlFilePath {Path to the XML policy file} -BinaryFilePath 
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       

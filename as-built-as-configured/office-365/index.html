@@ -1975,8 +1975,8 @@
 <p>No organisational add-ins have been configured.</p>
 <h3 id="cas-mailbox-plan">CAS mailbox plan</h3>
 <p>Please note, CAS mailbox plan can be retrieved (or set) through Exchange Online PowerShell. The policy objects are Exchange Online out of box policies, that require minimal edit.</p>
-<pre><code class="language-powershell">Get-CASMailboxPlan | Format-Table -Auto DisplayName,ActiveSyncEnabled,ImapEnabled,PopEnabled,OwaMailboxPolicy
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">Get-CASMailboxPlan</span> <span class="p">|</span> <span class="nb">Format-Table</span> <span class="n">-Auto</span> <span class="n">DisplayName</span><span class="p">,</span><span class="n">ActiveSyncEnabled</span><span class="p">,</span><span class="n">ImapEnabled</span><span class="p">,</span><span class="n">PopEnabled</span><span class="p">,</span><span class="n">OwaMailboxPolicy</span>
+</code></pre></div>
 <p>The following table describes the mailbox plans have been configured for all implementation types.</p>
 <table>
 <thead>
@@ -2705,14 +2705,14 @@
 </ul>
 <h3 id="authentication-policy">Authentication policy</h3>
 <p>Please note, authentication policies can be retrieved (or set) through Exchange Online PowerShell. If the setting for block legacy authentication is in the Microsoft Admin portal, a policy named <strong>BlockBasic</strong> is created but it does not turn off all the basic authentication parameters.</p>
-<pre><code class="language-powershell">Get-AuthenticationPolicy
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">Get-AuthenticationPolicy</span>
+</code></pre></div>
 <p>To update the default <code>BlockBasic</code> policy, run the following PowerShell command.</p>
-<pre><code class="language-powershell">Set-AuthenticationPolicy -Identity &quot;BlockBasic&lt;number&gt;&quot; -AllowBasicAuthOutlookService:$false -AllowBasicAuthReportingWebServices:$false
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">Set-AuthenticationPolicy</span> <span class="n">-Identity</span> <span class="s2">&quot;BlockBasic&lt;number&gt;&quot;</span> <span class="n">-AllowBasicAuthOutlookService</span><span class="p">:</span><span class="nv">$false</span> <span class="n">-AllowBasicAuthReportingWebServices</span><span class="p">:</span><span class="nv">$false</span>
+</code></pre></div>
 <p>If a new custom policy is created that blocks the specific parameters, then it can be set as a default for the whole organisation using the following PowerShell command.</p>
-<pre><code class="language-powershell">Set-OrganizationConfig -DefaultAuthenticationPolicy &quot;Organisation Authentication Policy&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">Set-OrganizationConfig</span> <span class="n">-DefaultAuthenticationPolicy</span> <span class="s2">&quot;Organisation Authentication Policy&quot;</span>
+</code></pre></div>
 <p>The following table describes the Authentication Policy configuration settings for all implementation types.</p>
 <table>
 <thead>
@@ -2782,8 +2782,8 @@
 </table>
 <h3 id="outlook-web-access-policy">Outlook Web Access policy</h3>
 <p>Please note, Outlook Web Access policies can be retrieved (or set) through Exchange Online PowerShell. The policy object is Exchange Online out of box policy, that requires minimal edit.</p>
-<pre><code class="language-powershell">Get-OwaMailboxPolicy -identity OwaMailboxPolicy-Default
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">Get-OwaMailboxPolicy</span> <span class="n">-identity</span> <span class="n">OwaMailboxPolicy-Default</span>
+</code></pre></div>
 <p>The following table describes the Outlook Web Access Policy configuration settings for all implementation types.</p>
 <table>
 <thead>
@@ -3118,12 +3118,12 @@
 <h3 id="mailbox-archive">Mailbox archive</h3>
 <p>For Hybrid implementation types, the Archive is configured using the On-Premises Exchange Administrator Console or PowerShell.</p>
 <p><code>Exchange Admin Center &gt; recipients &gt; mailboxes &gt; &lt;username&gt; &gt; mailbox features</code></p>
-<pre><code class="language-powershell">Enable-RemoteMailbox -Identity &quot;Jane Smith&quot; -Archive
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Enable-RemoteMailbox</span> <span class="n">-Identity</span> <span class="s2">&quot;Jane Smith&quot;</span> <span class="n">-Archive</span>
+</code></pre></div>
 <p>For Cloud-native implementation types, the Archive is configured using the Exchange Online Admin Center or Exchange Online PowerShell.</p>
 <p><code>Exchange Online Admin Center &gt; recipients &gt; mailboxes &gt; &lt;username&gt; &gt; mailbox features</code></p>
-<pre><code class="language-powershell">Enable-Mailbox &quot;Jane Smith&quot; -Archive
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">Enable-Mailbox</span> <span class="s2">&quot;Jane Smith&quot;</span> <span class="n">-Archive</span>
+</code></pre></div>
 <p>The following table describes the mailbox archive settings for all implementation types.</p>
 <table>
 <thead>
@@ -3148,13 +3148,13 @@
 </tbody>
 </table>
 <p>The following PowerShell command enables the Auto Expanding Archive using the Exchange Online module.</p>
-<pre><code class="language-powershell">Set-OrganizationConfig -AutoExpandingArchive
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">Set-OrganizationConfig</span> <span class="n">-AutoExpandingArchive</span>
+</code></pre></div>
 <h3 id="mailbox-auditing">Mailbox auditing</h3>
 <p>User Mailbox and Shared Mailbox audit actions are set using the global defaults, this avoids having a per mailbox audit configuration. For more information on each audit type in Exchange Online and additional per-mailbox configuration options, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/enable-mailbox-auditing?view=o365-worldwide#mailbox-actions-for-user-mailboxes-and-shared-mailboxes">Manage mailbox auditing</a>.</p>
 <p>Mailbox auditing settings can be set and retrieved using Exchange Online PowerShell.</p>
-<pre><code class="language-powershell">Set-OrganizationConfig -AuditDisabled $true
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">Set-OrganizationConfig</span> <span class="n">-AuditDisabled</span> <span class="nv">$true</span>
+</code></pre></div>
 <p>The following table describes the mailbox archive settings for all implementation types. </p>
 <table>
 <thead>
@@ -3181,10 +3181,10 @@
 <p>Note 1, the <code>x-protective-marking</code> rules listed here are not exhaustive and are an example that can be used for each classification used within the Organisation.</p>
 <p>Note 2, as of February 2022 the ability to add the <code>ORIGIN=user@organisation.com.au</code> parameter is not possible using a transport rule. If the Organisation has the ability to transform mail messages using a gateway appliance then this is the current recommended approach for updating header values.</p>
 <p>To find the <code>MSIP_Label</code> "guid" IDs for each sensitivity label use the <a href="https://docs.microsoft.com/en-us/powershell/exchange/scc-powershell?view=exchange-ps">Security &amp; Compliance Center PowerShell Modules</a>.</p>
-<pre><code class="language-powershell">Connect-IPPSSession -UserPrincipalName &lt;admin&gt;@&lt;organisation&gt;.onmicrosoft.com
-
-Get-label | where{$_.Name -eq &quot;U&quot;} |select name,guid
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">Connect-IPPSSession</span> <span class="n">-UserPrincipalName</span> <span class="p">&lt;</span><span class="n">admin</span><span class="p">&gt;@&lt;</span><span class="n">organisation</span><span class="p">&gt;.</span><span class="n">onmicrosoft</span><span class="p">.</span><span class="n">com</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">Get-label</span> <span class="p">|</span> <span class="n">where</span><span class="p">{</span><span class="nv">$_</span><span class="p">.</span><span class="n">Name</span> <span class="o">-eq</span> <span class="s2">&quot;U&quot;</span><span class="p">}</span> <span class="p">|</span><span class="nb">select </span><span class="n">name</span><span class="p">,</span><span class="n">guid</span>
+</code></pre></div>
 <ul>
 <li>If the message header includes:  <code>msip_labels</code> header contains <code>MSIP_Label_XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX_Enabled=true</code></li>
 <li>Take the following actions: Set the message header with this value: <code>X-Protective-Marking</code> to the value <code>VER=2018.4, NS=gov.au, SEC=&lt;CLASSIFICATION&gt;, CAVEAT=&lt;CAVEAT&gt;, ACCESS=&lt;IMM&gt;</code></li>
@@ -3200,21 +3200,22 @@ Get-label | where{$_.Name -eq &quot;U&quot;} |select name,guid
 <ul>
 <li>Apply this rule if: The recipient is located <code>Outside the organization</code></li>
 <li>Do the following actions: Append the message with the disclaimer
-  ```
-  '<br>
-  <br>
-<br />
-<p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;">The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.</p></li>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&#39;&lt;br&gt;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&lt;br&gt;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&lt;p style=&quot;font-size:8pt; line-height:10pt; font-family: &#39;Cambria&#39;,&#39;times roman&#39;,serif;&quot;&gt;The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.&lt;/p&gt;&#39;. 
+</code></pre></div></li>
+<li>If the disclaimer can't be applied, reject the message.</li>
+<li>ExceptIfSubjectMatchesPatterns: -</li>
+<li>FromScope: -</li>
+<li>HeaderContainsMessageHeader: -</li>
+<li>HeaderContainsWords: -</li>
+<li>Mode: <code>Enforce</code></li>
+<li>Name: <code>Disclaimer</code></li>
+<li>PrependSubject: -</li>
+<li>Priority: <code>1</code></li>
+<li>SentToScope: <code>NotInOrganization</code></li>
+<li>State: <code>Enabled</code></li>
 </ul>
-<p>'. 
-  <code>``
-- If the disclaimer can't be applied, reject the message.
-- ExceptIfSubjectMatchesPatterns: -
-- FromScope: -
-- HeaderContainsMessageHeader: -
-- HeaderContainsWords: -
-- Mode:</code>Enforce<code>- Name:</code>Disclaimer<code>- PrependSubject: -
-- Priority:</code>1<code>- SentToScope:</code>NotInOrganization<code>- State:</code>Enabled`</p>
 <h3 id="journaling">Journaling</h3>
 <p><code>Exchange Online Admin Centre (Classic) &gt; compliance management &gt; journal rules</code> is not configured for all implementation types.</p>
 <h3 id="mailbox-retention">Mailbox retention</h3>
@@ -3354,8 +3355,8 @@ Get-label | where{$_.Name -eq &quot;U&quot;} |select name,guid
 <h3 id="address-lists">Address lists</h3>
 <p>Existing address list configuration for hybrid implementations can be transferred to Exchange Online during the hybrid wizard using the <a href="https://docs.microsoft.com/en-us/exchange/org-config-transfer-attributes/org-config-transfer-attributes">Organization configuration transfer</a> option.</p>
 <p>Please note, address lists can be retrieved (or set) through Exchange Online PowerShell. The <em>'Address Lists'</em> role within Exchange Online is required, for the account used to view or update Address lists.</p>
-<pre><code class="language-powershell">Get-AddressList -identity 'Address List Name'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">Get-AddressList</span> <span class="n">-identity</span> <span class="s1">&#39;Address List Name&#39;</span>
+</code></pre></div>
 <p>The following table describes the Address List configuration settings for all implementation types. </p>
 <table>
 <thead>
@@ -4182,11 +4183,13 @@ Get-label | where{$_.Name -eq &quot;U&quot;} |select name,guid
 <p><code>SharePoint admin center &gt; Policies &gt; Sharing &gt; External Sharing</code></p>
 <ul>
 <li>Content can be shared with:
-  <code>SharePoint: New and existing guests
-  OneDrive: Only people in your organization</code></li>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>SharePoint: New and existing guests
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>OneDrive: Only people in your organization
+</code></pre></div></li>
 <li>Limit external sharing by domain:
-  <code>&lt;organisation&gt;.com.au
-  &lt;other trusted Agencies&gt;</code></li>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;organisation&gt;.com.au
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>&lt;other trusted Agencies&gt;
+</code></pre></div></li>
 <li>Allow only users in specific security groups to share externally: <code>False</code></li>
 <li>Guests must sign in using the same account to which sharing invitations are sent: <code>True</code></li>
 <li>Allow guests to share items they don’t own: <code>False</code></li>
@@ -5604,6 +5607,11 @@ Get-label | where{$_.Name -eq &quot;U&quot;} |select name,guid
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       

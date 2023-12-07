@@ -4237,12 +4237,12 @@
 <p>Before creating a user or privileged user account ensure the user has been authorised and approved to access the system and that Agency privileged management procedures for those users with administrative accounts have been complied with.</p>
 <p>This instruction includes how to create a standard user or administrative account.</p>
 <p>Once the below has been followed for the creation of a user or administrative account a few additional steps will occur automatically. If a standard user account is created (e.g., joe.bloggs@domain.gov.au), the account will automatically be added to the dynamic Azure AD group <strong>rol-Agency-users</strong> using the following rule syntax:</p>
-<pre><code>(user.accountEnabled -eq true) and (user.userPrincipalName -notContains &quot;_priv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(user.accountEnabled -eq true) and (user.userPrincipalName -notContains &quot;_priv&quot;)
+</code></pre></div>
 <p>This will automatically provide access to a standard set of applications and apply licenses.</p>
 <p>If an administrative account is created (e.g., joe.bloggs_priv@domain.gov.au) is created, the account will automatically be added to the dynamic Azure AD group <strong>rol-Agency-Administrators</strong> using the following rule syntax:</p>
-<pre><code>(user.accountEnabled -eq true) and (user.userPrincipalName -contains &quot;_priv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(user.accountEnabled -eq true) and (user.userPrincipalName -contains &quot;_priv&quot;)
+</code></pre></div>
 <p>In this manner, user licencing and standard user applications are controlled automatically. To allow this process to occur, please allow up to 30 minutes to pass before providing login credentials to users to ensure correct propagation of group membership and licensing.</p>
 <h4 id="step-1">Step 1</h4>
 <p>Within your internet browser navigate to the Microsoft 365 admin center (<a href="https://admin.microsoft.com">https://admin.microsoft.com</a>)</p>
@@ -4709,23 +4709,23 @@
 <p>Launch the Microsoft Exchange Online PowerShell module</p>
 <h4 id="step-2_19">Step 2</h4>
 <p>Connect to the tenant using the following command:</p>
-<pre><code>Connect-EXOPSSession -UserPrincipalName your.name@desktop.gov.au
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Connect-EXOPSSession -UserPrincipalName your.name@desktop.gov.au
+</code></pre></div>
 <h4 id="step-3_19">Step 3</h4>
 <p>A pop-up window will appear asking for your password, enter it and press Sign in.</p>
 <p>You will also be requested for a MFA challenge response, accept it, the pop-up window will close when authentication is successful.</p>
 <h4 id="step-4_17">Step 4</h4>
 <p>Run the following command to place a mailbox on litigation hold:</p>
-<pre><code>Set-Mailbox user.name@desktop.gov.au -LitigationHoldEnabled $true -LitigationHoldDuration 365
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Set-Mailbox user.name@desktop.gov.au -LitigationHoldEnabled $true -LitigationHoldDuration 365
+</code></pre></div>
 <h4 id="step-5_17">Step 5</h4>
 <p>Run the following command to put all mailboxes in the tenant in litigation mode:</p>
-<pre><code>Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq &quot;UserMailbox&quot;} | Set-Mailbox -LitigationHoldEnabled $true -LitigationHoldDuration 365
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq &quot;UserMailbox&quot;} | Set-Mailbox -LitigationHoldEnabled $true -LitigationHoldDuration 365
+</code></pre></div>
 <h4 id="step-6_14">Step 6</h4>
 <p>When complete, close your session with the following command:</p>
-<pre><code>Remove-PSSession
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Remove-PSSession
+</code></pre></div>
 <h3 id="web-interface-litigation-hold">Web interface litigation hold</h3>
 <p>This example explains how to place a single users’ mailbox on litigation hold via the Exchange Admin Center (EAC) web interface.</p>
 <h4 id="step-1_20">Step 1</h4>
@@ -5051,6 +5051,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       

@@ -1268,10 +1268,10 @@
 <h2 id="microsoft-graph-api">Microsoft Graph API</h2>
 <p>In order to use the Graph API to query sign-in information, the agency must create an Azure AD App registration which will be used by the script to authenticate to the Graph API.</p>
 <p>One of the following role based access control groups are required to create the app registration:</p>
-<pre><code>Application Administrator
-Cloud Application Administrator
-Global Administrator 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Application Administrator
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Cloud Application Administrator
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Global Administrator 
+</code></pre></div>
 <p>Register the Application for Microsoft Graph.</p>
 <ol>
 <li>Navigate to <code>Azure Portal &gt; Active Directory &gt; App Registration &gt; New Registration</code></li>
@@ -1325,82 +1325,82 @@ Global Administrator
 <li>Accounts that have not yet logged on are excluded.</li>
 </ul>
 <p>The script is ideally executed within an Azure Automation account on a schedule. The permissions delegated to the script to disable user accounts would be granted to the Azure Automation RunAs account within the tenant.</p>
-<pre><code class="language-powershell"># Sample Script - disable user accounts in tenant that have not been logged in within 30 days
-# Source: https://desktop.gov.au/blueprint/abac/admin-disable-inactive-users.html
-
-# Connection information for Azure AD using Azure Automation account/runbook
-$connectionName = AzureRunAsConnection
-$servicePrincipalConnection=Get-AutomationConnection -Name $connectionName         
-Connect-AzureAD -TenantId $servicePrincipalConnection.TenantId `
-     -ApplicationId $servicePrincipalConnection.ApplicationId `
-     -CertificateThumbprint $servicePrincipalConnection.CertificateThumbprint
-
-# Manual connect to Azure AD
-#Connect-AzureAD   
-
-# Connection information for Graph API connection - specific to Agency
-$clientID = &quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;
-$tenantName = &quot;agency.onmicrosoft.com&quot;
-$clientSecret = &quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
-$resource = &quot;https://graph.microsoft.com/&quot;
-
-$ReqTokenBody = @{
-    Grant_Type    = &quot;client_credentials&quot;
-    Scope         = &quot;https://graph.microsoft.com/.default&quot;
-    client_Id     = $clientID
-    Client_Secret = $clientSecret
-} 
-
-$TokenResponse = Invoke-RestMethod -Uri &quot;https://login.microsoftonline.com/$TenantName/oauth2/v2.0/token&quot; -Method POST -Body $ReqTokenBody
-
-# Get all users in the tenant
-$uri = 'https://graph.microsoft.com/beta/users?$select=displayName,userPrincipalName,signInActivity'
-
-# Get todays date for date test later
-$Today=(Get-Date)
-
-# @odata.nextLink is used if results greated than 999 results
-$Data = while (-not [string]::IsNullOrEmpty($uri)) {
-    $apiCall = try {
-        Invoke-RestMethod -Headers @{Authorization = &quot;Bearer $($Tokenresponse.access_token)&quot;} -Uri $uri -Method Get
-    }
-    catch {
-        $errorMessage = $_.ErrorDetails.Message | ConvertFrom-Json
-    }
-    $uri = $null
-    if ($apiCall) {
-        $uri = $apiCall.'@odata.nextLink'
-        $apiCall
-    }
-}
-
-# Set the result into an variable
-$result = ($Data | select-object Value).Value
-$Export = $result | select DisplayName,UserPrincipalName,@{n=&quot;LastLoginDate&quot;;e={$_.signInActivity.lastSignInDateTime}}
-
-# Export user data
-$Users = $Export | select DisplayName,UserPrincipalName,@{Name='LastLoginDate';Expression={[datetime]::Parse($_.LastLoginDate)}}
-
-#Disable accounts that are not breakglass that have not been used in 30 days.
-Foreach ($User in $Users) {
-    if ($User.LastLoginDate) {        
-        $LastLogin = $User.LastLoginDate
-        $TimeSpan = New-TimeSpan –Start $LastLogin –End $Today
-        If ($TimeSpan.Days -gt 30) {
-            write-host &quot;User to be disabled true&quot; $User.userPrincipalName &quot;Last logon:&quot;$user.LastLoginDate $TimeSpan.Days &quot;days ago&quot;
-            If ($User.userPrincipalName -notlike '*break.glass*') {
-                write-host $User.userPrincipalName &quot;-User not breakglass account, proceed with disable of user&quot;
-                Set-AzureADUser -ObjectId $User.userPrincipalName -AccountEnabled $false
-                Revoke-AzureADUserAllRefreshToken -ObjectId $User.userPrincipalName
-            } else {
-                write-host $User.userPrincipalName &quot;- User is breakglass account, no action taken on user&quot;
-            }               
-        }
-        } else {
-            write-host $User.userPrincipalName &quot;-User is active within 30 day threshold, last logon:&quot;$user.LastLoginDate &quot; &quot; $TimeSpan.Days &quot; days ago&quot;
-        }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Sample Script - disable user accounts in tenant that have not been logged in within 30 days</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c"># Source: https://desktop.gov.au/blueprint/abac/admin-disable-inactive-users.html</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c"># Connection information for Azure AD using Azure Automation account/runbook</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">$connectionName</span> <span class="p">=</span> <span class="n">AzureRunAsConnection</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">$servicePrincipalConnection</span><span class="p">=</span><span class="nb">Get-AutomationConnection</span> <span class="n">-Name</span> <span class="nv">$connectionName</span>         
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">Connect-AzureAD</span> <span class="n">-TenantId</span> <span class="nv">$servicePrincipalConnection</span><span class="p">.</span><span class="n">TenantId</span> <span class="p">`</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>     <span class="n">-ApplicationId</span> <span class="nv">$servicePrincipalConnection</span><span class="p">.</span><span class="n">ApplicationId</span> <span class="p">`</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>     <span class="n">-CertificateThumbprint</span> <span class="nv">$servicePrincipalConnection</span><span class="p">.</span><span class="n">CertificateThumbprint</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c"># Manual connect to Azure AD</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c">#Connect-AzureAD   </span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c"># Connection information for Graph API connection - specific to Agency</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nv">$clientID</span> <span class="p">=</span> <span class="s2">&quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="nv">$tenantName</span> <span class="p">=</span> <span class="s2">&quot;agency.onmicrosoft.com&quot;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nv">$clientSecret</span> <span class="p">=</span> <span class="s2">&quot;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="nv">$resource</span> <span class="p">=</span> <span class="s2">&quot;https://graph.microsoft.com/&quot;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nv">$ReqTokenBody</span> <span class="p">=</span> <span class="p">@{</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="n">Grant_Type</span>    <span class="p">=</span> <span class="s2">&quot;client_credentials&quot;</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">Scope</span>         <span class="p">=</span> <span class="s2">&quot;https://graph.microsoft.com/.default&quot;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="n">client_Id</span>     <span class="p">=</span> <span class="nv">$clientID</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="n">Client_Secret</span> <span class="p">=</span> <span class="nv">$clientSecret</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="p">}</span> 
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="nv">$TokenResponse</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="s2">&quot;https://login.microsoftonline.com/$TenantName/oauth2/v2.0/token&quot;</span> <span class="n">-Method</span> <span class="n">POST</span> <span class="n">-Body</span> <span class="nv">$ReqTokenBody</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c"># Get all users in the tenant</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="nv">$uri</span> <span class="p">=</span> <span class="s1">&#39;https://graph.microsoft.com/beta/users?$select=displayName,userPrincipalName,signInActivity&#39;</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="c"># Get todays date for date test later</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="nv">$Today</span><span class="p">=(</span><span class="nb">Get-Date</span><span class="p">)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="c"># @odata.nextLink is used if results greated than 999 results</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="nv">$Data</span> <span class="p">=</span> <span class="k">while</span> <span class="p">(</span><span class="o">-not</span> <span class="no">[string]</span><span class="p">::</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="nv">$uri</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="nv">$apiCall</span> <span class="p">=</span> <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>        <span class="nb">Invoke-RestMethod</span> <span class="n">-Headers</span> <span class="p">@{</span><span class="n">Authorization</span> <span class="p">=</span> <span class="s2">&quot;Bearer </span><span class="p">$(</span><span class="nv">$Tokenresponse</span><span class="p">.</span><span class="n">access_token</span><span class="p">)</span><span class="s2">&quot;</span><span class="p">}</span> <span class="n">-Uri</span> <span class="nv">$uri</span> <span class="n">-Method</span> <span class="n">Get</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    <span class="p">}</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="k">catch</span> <span class="p">{</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>        <span class="nv">$errorMessage</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="n">ErrorDetails</span><span class="p">.</span><span class="n">Message</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    <span class="p">}</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    <span class="nv">$uri</span> <span class="p">=</span> <span class="nv">$null</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$apiCall</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>        <span class="nv">$uri</span> <span class="p">=</span> <span class="nv">$apiCall</span><span class="p">.</span><span class="s1">&#39;@odata.nextLink&#39;</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>        <span class="nv">$apiCall</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    <span class="p">}</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="p">}</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c"># Set the result into an variable</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="nv">$result</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$Data</span> <span class="p">|</span> <span class="nb">select-object</span> <span class="n">Value</span><span class="p">).</span><span class="n">Value</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="nv">$Export</span> <span class="p">=</span> <span class="nv">$result</span> <span class="p">|</span> <span class="nb">select </span><span class="n">DisplayName</span><span class="p">,</span><span class="n">UserPrincipalName</span><span class="p">,@{</span><span class="n">n</span><span class="p">=</span><span class="s2">&quot;LastLoginDate&quot;</span><span class="p">;</span><span class="n">e</span><span class="p">={</span><span class="nv">$_</span><span class="p">.</span><span class="n">signInActivity</span><span class="p">.</span><span class="n">lastSignInDateTime</span><span class="p">}}</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="c"># Export user data</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="nv">$Users</span> <span class="p">=</span> <span class="nv">$Export</span> <span class="p">|</span> <span class="nb">select </span><span class="n">DisplayName</span><span class="p">,</span><span class="n">UserPrincipalName</span><span class="p">,@{</span><span class="n">Name</span><span class="p">=</span><span class="s1">&#39;LastLoginDate&#39;</span><span class="p">;</span><span class="n">Expression</span><span class="p">={</span><span class="no">[datetime]</span><span class="p">::</span><span class="n">Parse</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">LastLoginDate</span><span class="p">)}}</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="c">#Disable accounts that are not breakglass that have not been used in 30 days.</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="k">Foreach</span> <span class="p">(</span><span class="nv">$User</span> <span class="k">in</span> <span class="nv">$Users</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>    <span class="k">if</span> <span class="p">(</span><span class="nv">$User</span><span class="p">.</span><span class="n">LastLoginDate</span><span class="p">)</span> <span class="p">{</span>        
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>        <span class="nv">$LastLogin</span> <span class="p">=</span> <span class="nv">$User</span><span class="p">.</span><span class="n">LastLoginDate</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>        <span class="nv">$TimeSpan</span> <span class="p">=</span> <span class="nb">New-TimeSpan</span> <span class="err">–</span><span class="nb">Start </span><span class="nv">$LastLogin</span> <span class="err">–</span><span class="k">End</span> <span class="nv">$Today</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>        <span class="k">If</span> <span class="p">(</span><span class="nv">$TimeSpan</span><span class="p">.</span><span class="n">Days</span> <span class="o">-gt</span> <span class="n">30</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>            <span class="nb">write-host</span> <span class="s2">&quot;User to be disabled true&quot;</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="s2">&quot;Last logon:&quot;</span><span class="nv">$user</span><span class="p">.</span><span class="n">LastLoginDate</span> <span class="nv">$TimeSpan</span><span class="p">.</span><span class="n">Days</span> <span class="s2">&quot;days ago&quot;</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>            <span class="k">If</span> <span class="p">(</span><span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="o">-notlike</span> <span class="s1">&#39;*break.glass*&#39;</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>                <span class="nb">write-host</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="s2">&quot;-User not breakglass account, proceed with disable of user&quot;</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>                <span class="nb">Set-AzureADUser</span> <span class="n">-ObjectId</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="n">-AccountEnabled</span> <span class="nv">$false</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>                <span class="nb">Revoke-AzureADUserAllRefreshToken</span> <span class="n">-ObjectId</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>                <span class="nb">write-host</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="s2">&quot;- User is breakglass account, no action taken on user&quot;</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>            <span class="p">}</span>               
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>        <span class="p">}</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>            <span class="nb">write-host</span> <span class="nv">$User</span><span class="p">.</span><span class="n">userPrincipalName</span> <span class="s2">&quot;-User is active within 30 day threshold, last logon:&quot;</span><span class="nv">$user</span><span class="p">.</span><span class="n">LastLoginDate</span> <span class="s2">&quot; &quot;</span> <span class="nv">$TimeSpan</span><span class="p">.</span><span class="n">Days</span> <span class="s2">&quot; days ago&quot;</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>        <span class="p">}</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="p">}</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
@@ -1442,6 +1442,11 @@ Foreach ($User in $Users) {
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       
