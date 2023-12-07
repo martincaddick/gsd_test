@@ -59,7 +59,7 @@ plugins:
   - search
   - simple
   - awesome-pages
-  - privacy
+  # - privacy
   # - mike:
   #   canonical_version: latest
   - git-revision-date-localized:
