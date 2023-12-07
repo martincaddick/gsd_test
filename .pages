@@ -1,6 +1,7 @@
 nav:
-    - About: README.md
+    - Readme: readme.md
     - ABACs: as-built-as-configured
     - Blueprint: blueprint
     - News: news
     - Patterns: patterns
+    - Security: security

@@ -1,1 +1,1 @@
-Changed gsd_test to the blueprint
+This the readme page
