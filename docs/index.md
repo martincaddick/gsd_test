@@ -17,4 +17,8 @@ Have a look around, and if you have a suggestion, feel free to drop us a line in
 
 Check out some of our products below that we use ourselves to assist with Microsoft 365 deployments, and if you need a hand with implementing the blueprint, get in touch.
 
-[![Powered by oobe](img/oobe-a-Fujitsu-company-Primary-Logo-White-RGB.svg)](https://www.oobe.com.au)
+[![Powered by Blue oobe](img/oobe-a-Fujitsu-company-Secondary-Logo-Blue-RGB.svg)](https://www.oobe.com.au)
+
+[![Powered by White Pri oobe](img/oobe-a-Fujitsu-company-Primary-Logo-White-RGB.svg)](https://www.oobe.com.au)
+
+[![Powered by White Sec oobe](img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg)](https://www.oobe.com.au)
