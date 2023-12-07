@@ -8,7 +8,7 @@ repo_name: "The blueprint for Review"
 nav:
    - Home : ""
    - Blueprint :
-     - ...
+     - ... | **/index.md
    - News : ""
    - Patterns : ""
 
