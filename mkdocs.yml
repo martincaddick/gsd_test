@@ -66,8 +66,8 @@ plugins:
       fallback_to_build_date: true
       enable_creation_date: true
       timezone: Australia/Sydney
-  # - glightbox:
-  #     auto_caption: true
+  - glightbox:
+      auto_caption: true
   #- social
   # - awesome-list
   #- table-reader - DON'T use, relys on pandas, too heavy for this
@@ -80,7 +80,7 @@ plugins:
 extra:
   version:
     provider: mike
-  generator: false
+  # generator: false
 
 # Markdown Extensions 
 markdown_extensions:
@@ -88,19 +88,19 @@ markdown_extensions:
   - meta
   - md_in_html
   # removed for testing
-  # - admonition
-  # - footnotes
-  # - pymdownx.critic
-  # - pymdownx.caret
-  # - pymdownx.keys
-  # - pymdownx.mark
-  # - pymdownx.tilde
-  # - pymdownx.details
-  # - pymdownx.highlight:
-  #     anchor_linenums: true
-  # - pymdownx.inlinehilite
-  # - pymdownx.snippets
-  # - pymdownx.superfences
+  - admonition
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   # - pymdownx.emoji:
   #     emoji_index: !!python/name:materialx.emoji.twemoji
   #     emoji_generator: !!python/name:materialx.emoji.to_svg
