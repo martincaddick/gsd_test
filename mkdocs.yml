@@ -5,6 +5,13 @@ site_name: "The blueprint for Review"
 # Configuration
 repo_url: https://github.com/martincaddick/gsd_test
 repo_name: "The blueprint for Review"
+nav:
+   - Home : ""
+   - Blueprint :
+     - ...
+   - News : ""
+   - Patterns : ""
+
 theme:
   name: material
   icon: 
@@ -53,6 +60,7 @@ docs_dir: docs
 plugins:
   - search
   - simple
+  - awesome-pages
   # - mike:
   #   canonical_version: latest
   - git-revision-date-localized:
@@ -62,7 +70,7 @@ plugins:
   # - glightbox:
   #     auto_caption: true
   #- social
-  #- awesome-list
+  - awesome-list
   #- table-reader - DON'T use, relys on pandas, too heavy for this
   #- img2fig - Not needed
   # - mermaid2
