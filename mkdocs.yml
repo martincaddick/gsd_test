@@ -70,7 +70,7 @@ plugins:
   # - glightbox:
   #     auto_caption: true
   #- social
-  - awesome-list
+  # - awesome-list
   #- table-reader - DON'T use, relys on pandas, too heavy for this
   #- img2fig - Not needed
   # - mermaid2
