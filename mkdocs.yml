@@ -5,12 +5,6 @@ site_name: "The blueprint for Review"
 # Configuration
 repo_url: https://github.com/martincaddick/gsd_test
 repo_name: "The blueprint for Review"
-nav:
-   - Home : ""
-   - Blueprint :
-     - ... | **/index.md
-   - News : ""
-   - Patterns : ""
 
 theme:
   name: material
