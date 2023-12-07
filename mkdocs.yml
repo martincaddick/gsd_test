@@ -33,7 +33,7 @@ theme:
   palette:
     - scheme: oobeprimary
       primary: oobeprimary
-      accent: green
+      # accent: green
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -59,6 +59,7 @@ plugins:
   - search
   - simple
   - awesome-pages
+  - privacy
   # - mike:
   #   canonical_version: latest
   - git-revision-date-localized:
@@ -79,6 +80,7 @@ plugins:
 extra:
   version:
     provider: mike
+  generator: false
 
 # Markdown Extensions 
 markdown_extensions:
