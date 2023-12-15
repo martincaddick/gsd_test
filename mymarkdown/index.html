@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://martincaddick.github.io/repos/">
+        <link rel="canonical" href="https://martincaddick.github.io/mymarkdown/">
       
       
-        <link rel="prev" href="../security/system-security-plan/">
+        <link rel="prev" href="../repos/">
       
-      
-        <link rel="next" href="../mymarkdown/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Repos - The blueprint for Review</title>
+        <title>Mymarkdown - The blueprint for Review</title>
       
     
     
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Repos
+              Mymarkdown
             
           </span>
         </div>
@@ -1215,99 +1213,36 @@
                   
 
 
-  <h1>Repos</h1>
+  <h1>Mymarkdown</h1>
 
-<p>Two normal Pull Requests in a month when people are contributing to 'theblueprint'.</p>
-<p>When all PRs are approved the develop branch is merged into the public branch</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gitGraph
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    branch public
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    commit id: &quot;2023.11 Release&quot;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    branch develop
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    checkout develop
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    commit id: &quot;.&quot;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    branch PR1
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    commit id: &quot;Push PR#1 to dev website&quot;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    checkout develop
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    merge PR1
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    branch PR2
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    commit id: &quot;Push PR#2 to dev website&quot;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    checkout develop
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    merge PR2
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    commit id: &quot;..&quot;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    checkout public
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    merge develop
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    commit id: &quot;2023.12 Release.&quot;
+<div class="highlight"><pre><span></span><code>        https://github.com/organizations/oobeDemo/settings/profile
+
+        *General settings*
+
+        | **Setting**                     | **Value**                                                    |
+        | ------------------------------- | ------------------------------------------------------------ |
+        | Organization display name       | Blank                                                        |
+        | Email (will be public)          | Blank                                                        |
+        | Description                     | Blank                                                        |
+        | URL                             | Blank                                                        |
+        | Social accounts                 | Blank                                                        |
+        | Location                        | Blank                                                        |
+        | Billing email (Private)         | [martin.caddick@oobe.com.au](mailto:martin.caddick@oobe.com.au) |
+        | Gravatar email (Private)        | Blank                                                        |
+        | Sponsors update email (Private) | Blank                                                        |
+        | Link Patreon account            | Blank                                                        |
 </code></pre></div>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>graph TB
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    A[Push to Repository] --&gt; B[GitHub Actions]
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    B --&gt; C[Job: Create Branch]
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    C --&gt; D[Step 1: Checkout Code]
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    C --&gt; E[Step 2: Create New Branch]
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    D --&gt;|Success| E
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    E --&gt;|Success| F[Job Complete]
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>graph TB
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    A[Push to Repository] --&gt; B[GitHub Actions]
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    B --&gt; C[Job: Build]
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    C --&gt; D[Step 1: Checkout the Code]
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    C --&gt; E[Step 2: Configure Git Credentials]
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    C --&gt; F[Step 3: Python Setup]
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    C --&gt; G[Step 4: Cache]
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    C --&gt; H[Step 5: Install Dependencies]
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    C --&gt; I[Step 6: Read VERSION File]
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    C --&gt; J[Step 7: Deploy Version]
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    C --&gt; K[Step 8: Get the gh-pages Branch]
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    C --&gt; L[Step 9: List Files]
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    C --&gt; M[Step 10: Deploy the Website]
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    D --&gt;|Success| E
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    E --&gt;|Success| F
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    F --&gt;|Success| G
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    G --&gt;|Success| H
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    H --&gt;|Success| I
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    I --&gt;|Success| J
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    J --&gt;|Success| K
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    K --&gt;|Success| L
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    L --&gt;|Success| M
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    M --&gt;|Success| N[Job Complete]
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>graph TB
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    A[ci] --&gt; B[on]
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    B --&gt; C[push]
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    C --&gt; D[branches: develop]
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    B --&gt; E[workflow_dispatch]
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    A --&gt; F[permissions]
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    F --&gt; G[contents: write]
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    A --&gt; H[jobs]
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    H --&gt; I[deploy]
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    I --&gt; J[runs-on: ubuntu-latest]
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    J --&gt; K[steps]
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    K --&gt; L[Checkout the code]
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    L --&gt; M[Python setup]
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    M --&gt; N[Cache]
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    N --&gt; O[Install mkdocs-material and deploy documentation]
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    O --&gt; P[Get the gh-pages branch]
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    P --&gt; Q[Deploy the website]
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    H --&gt; R[convert_via_pandoc]
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    R --&gt; S[runs-on: ubuntu-latest]
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    S --&gt; T[container]
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    T --&gt; U[steps]
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    U --&gt; V[Checkout the code]
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    V --&gt; W[Prepare output folder]
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    W --&gt; X[Prepare output directories]
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    X --&gt; Y[Convert md to docx]
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    Y --&gt; Z[Upload artifact]
-</code></pre></div></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 16, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 16, 2023</span>
       
     
   </small>
